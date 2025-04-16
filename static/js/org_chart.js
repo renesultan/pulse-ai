@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const orgStructureText = document.getElementById('org-structure-data').dataset.orgStructure;
     const companyName = document.getElementById('company-name').innerText;
     const departmentName = document.getElementById('department-name').dataset.departmentName;
+    const reportingLine = document.getElementById('reporting-line-data')?.dataset.reportingLine || '';
     
     // Parse the organization structure
     try {
@@ -16,7 +17,11 @@ document.addEventListener('DOMContentLoaded', async function() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                org_structure: orgStructureText
+                org_structure: orgStructureText,
+                company_name: companyName,
+                department_name: departmentName,
+                reporting_line: reportingLine,
+                save_to_db: true // Save to database
             })
         });
         
