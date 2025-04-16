@@ -27,6 +27,15 @@
                 <div id="department-name" data-department-name="{{ department_name }}" style="display: none;"></div>
                 <div id="org-structure-data" data-org-structure="{{ org_structure }}" style="display: none;"></div>
                 <div id="reporting-line-data" data-reporting-line="{{ reporting_line }}" style="display: none;"></div>
+                {% if chart_data %}
+                <div id="chart-data" data-chart-data="{{ chart_data|safe }}" style="display: none;"></div>
+                {% endif %}
+                {% if chart_title %}
+                <div id="chart-title" data-chart-title="{{ chart_title }}" style="display: none;"></div>
+                {% endif %}
+                {% if view_type %}
+                <div id="view-type" data-view-type="{{ view_type }}" style="display: none;"></div>
+                {% endif %}
             </div>
             
             <div class="header-icons">

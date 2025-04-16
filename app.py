@@ -1,10 +1,11 @@
 import os
 import logging
 import json
-from flask import Flask, render_template, request, jsonify
+import traceback
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
-# JSONB import removed
+from datetime import datetime
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -66,7 +67,43 @@ def generate_enterprise_example():
 
 @app.route('/org-chart')
 def org_chart():
-    # Get parameters from the query string
+    # Check if we're viewing an existing chart by ID
+    chart_id = request.args.get('id')
+    
+    if chart_id:
+        try:
+            # Get the org chart from the database
+            chart = OrgChart.query.get(chart_id)
+            
+            if not chart:
+                # If chart not found, redirect to home
+                logging.error(f"Org chart with ID {chart_id} not found")
+                return redirect('/')
+            
+            # Get the chart data
+            chart_data = None
+            if chart.chart_data:
+                chart_data = json.loads(chart.chart_data)
+            elif chart.reporting_structure:
+                # For backward compatibility
+                chart_data = json.loads(chart.reporting_structure)
+                
+            # Set up template variables
+            return render_template(
+                'org_chart.html',
+                company_name=chart.organization.name,
+                department_name=chart.department.name if chart.department else '',
+                chart_data=json.dumps(chart_data),
+                reporting_line=chart.reporting_line_type or chart.view_type or 'hierarchical',
+                chart_id=chart.id,
+                chart_title=chart.name,
+                view_type=chart.view_type
+            )
+        except Exception as e:
+            logging.error(f"Error loading org chart: {e}")
+            return redirect('/')
+    
+    # Regular parameters for new charts
     company_name = request.args.get('company_name', '')
     department_name = request.args.get('department_name', '')
     org_structure = request.args.get('org_structure', '')
