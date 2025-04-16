@@ -533,6 +533,19 @@ def generate_enterprise_data():
     """Generate and store enterprise organization data in the database"""
     with app.app_context():
         try:
+            # Check if the database schema is compatible with our models
+            try:
+                # Try to access a column that should exist in our updated schema
+                Organization.query.filter(Organization.description != None).first()
+                Employee.query.filter(Employee.primary_manager_id != None).first()
+                # If we get here, the schema seems compatible
+            except Exception as schema_error:
+                print(f"Database schema is not compatible with current models: {schema_error}")
+                print("Resetting database to match current schema...")
+                from utils.reset_database import reset_database
+                if not reset_database():
+                    return False
+                
             # Clean existing data
             db.session.query(secondary_reports).delete()
             db.session.query(project_members).delete()
