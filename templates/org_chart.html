@@ -42,9 +42,11 @@
                 <div id="department-name" data-department-name="{{ department_name }}" style="display: none;"></div>
                 <div id="org-structure-data" data-org-structure="{{ org_structure }}" style="display: none;"></div>
                 <div id="reporting-line-data" data-reporting-line="{{ reporting_line }}" style="display: none;"></div>
+                <script type="application/json" id="chart-data-json">
                 {% if chart_data %}
-                <div id="chart-data" data-chart-data="{{ chart_data|safe }}" style="display: none;"></div>
+                {{ chart_data|safe }}
                 {% endif %}
+                </script>
                 {% if chart_title %}
                 <div id="chart-title" data-chart-title="{{ chart_title }}" style="display: none;"></div>
                 {% endif %}

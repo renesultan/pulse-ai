@@ -14,10 +14,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     try {
         // Check if we have pre-loaded chart data (from database or server-processed)
-        if (chartDataElement && chartDataElement.dataset.chartData) {
-            console.log("Using pre-loaded chart data");
+        const chartDataJson = document.getElementById('chart-data-json');
+        
+        if (chartDataJson && chartDataJson.textContent.trim()) {
+            console.log("Using pre-loaded chart data from JSON script tag");
             try {
-                hierarchyData = JSON.parse(chartDataElement.dataset.chartData);
+                hierarchyData = JSON.parse(chartDataJson.textContent);
+                console.log("Successfully parsed JSON chart data");
                 
                 // Update the page title with chart title if available
                 if (chartTitleElement) {
@@ -25,7 +28,22 @@ document.addEventListener('DOMContentLoaded', async function() {
                 }
             } catch (e) {
                 console.error("Error parsing chart data:", e);
+                console.error("Content:", chartDataJson.textContent.substring(0, 100) + "...");
                 throw new Error('Invalid chart data format');
+            }
+        } else if (chartDataElement && chartDataElement.dataset.chartData) {
+            console.log("Using legacy pre-loaded chart data from data attribute");
+            try {
+                hierarchyData = JSON.parse(chartDataElement.dataset.chartData);
+                console.log("Successfully parsed data attribute chart data");
+                
+                // Update the page title with chart title if available
+                if (chartTitleElement) {
+                    document.title = `${chartTitleElement.dataset.chartTitle} - F*ck Meetings`;
+                }
+            } catch (e) {
+                console.error("Error parsing chart data from data attribute:", e);
+                throw new Error('Invalid chart data format in data attribute');
             }
         } else {
             // Use manual org structure input for parsing via API
