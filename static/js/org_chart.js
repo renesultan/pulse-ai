@@ -1,37 +1,60 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    // Get org structure data from the page
-    const orgStructureText = document.getElementById('org-structure-data').dataset.orgStructure;
+    // Get company and department data
     const companyName = document.getElementById('company-name').innerText;
     const departmentName = document.getElementById('department-name').dataset.departmentName;
     const reportingLine = document.getElementById('reporting-line-data')?.dataset.reportingLine || '';
+    const chartDataElement = document.getElementById('chart-data');
+    const chartTitleElement = document.getElementById('chart-title');
+    const viewTypeElement = document.getElementById('view-type');
     
-    // Parse the organization structure
+    // Show loading overlay
+    showLoadingOverlay();
+    
+    let hierarchyData;
+    
     try {
-        // Show loading overlay
-        showLoadingOverlay();
-        
-        // Send the org structure to the API for parsing
-        const response = await fetch('/api/parse-org-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                org_structure: orgStructureText,
-                company_name: companyName,
-                department_name: departmentName,
-                reporting_line: reportingLine,
-                save_to_db: true // Save to database
-            })
-        });
-        
-        if (!response.ok) {
-            throw new Error('Failed to parse organization data');
+        // Check if we have pre-loaded chart data (from database)
+        if (chartDataElement) {
+            console.log("Using pre-loaded chart data from database");
+            hierarchyData = JSON.parse(chartDataElement.dataset.chartData);
+            
+            // Update the page title with chart title if available
+            if (chartTitleElement) {
+                document.title = `${chartTitleElement.dataset.chartTitle} - F*ck Meetings`;
+            }
+        } else {
+            // Use manual org structure input for parsing
+            const orgStructureText = document.getElementById('org-structure-data').dataset.orgStructure;
+            
+            if (!orgStructureText) {
+                throw new Error('No organization data found');
+            }
+            
+            console.log("Parsing organization structure from text input");
+            
+            // Send the org structure to the API for parsing
+            const response = await fetch('/api/parse-org-data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    org_structure: orgStructureText,
+                    company_name: companyName,
+                    department_name: departmentName,
+                    reporting_line: reportingLine,
+                    save_to_db: true // Save to database
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error('Failed to parse organization data');
+            }
+            
+            hierarchyData = await response.json();
         }
         
-        const hierarchyData = await response.json();
-        
-        // Initialize the org chart
+        // Initialize the org chart with the data
         initOrgChart(hierarchyData);
         
         // Hide loading overlay
@@ -39,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     } catch (error) {
         console.error('Error initializing org chart:', error);
         hideLoadingOverlay();
-        showError('Failed to create organization chart. Please check your data format and try again.');
+        showError('Failed to load or create organization chart. Please check the data format and try again.');
     }
     
     // Initialize UI event listeners
