@@ -54,12 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form validation and submission
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Since we're using a POST form now, we only need to validate
+        // but don't need to handle the submission manually
         
         let isValid = true;
         
         // Basic validation
         if (!companyNameInput.value.trim()) {
+            e.preventDefault(); // Prevent form submission on error
             showError(companyNameInput, 'Company name is required');
             isValid = false;
         } else {
@@ -67,24 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (!orgStructureInput.value.trim()) {
+            e.preventDefault(); // Prevent form submission on error
             showError(orgStructureInput, 'Organization structure is required');
             isValid = false;
         } else {
             hideError(orgStructureInput);
         }
         
-        if (isValid) {
-            // Build the URL with query parameters
-            const params = new URLSearchParams({
-                company_name: companyNameInput.value,
-                department_name: departmentNameInput.value || '',
-                org_structure: orgStructureInput.value,
-                reporting_line: reportingLineSelect.value || ''
-            });
-            
-            // Navigate to the org chart page
-            window.location.href = `/org-chart?${params.toString()}`;
-        }
+        // The form will submit naturally if validation passes
     });
 
     // Helper functions for form validation

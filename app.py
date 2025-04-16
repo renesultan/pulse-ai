@@ -95,57 +95,80 @@ def get_enterprise_example():
         logging.error(f"Error fetching enterprise example data: {str(e)}")
         return jsonify({"error": "Failed to fetch enterprise example data"}), 500
 
-@app.route('/org-chart')
+@app.route('/org-chart', methods=['GET', 'POST'])
 def org_chart():
-    # Check if we're viewing an existing chart by ID
-    chart_id = request.args.get('id')
-    
-    if chart_id:
-        try:
-            # Get the org chart from the database
-            chart = OrgChart.query.get(chart_id)
-            
-            if not chart:
-                # If chart not found, redirect to home
-                logging.error(f"Org chart with ID {chart_id} not found")
-                return redirect('/')
-            
-            # Get the chart data
-            chart_data = None
-            if chart.chart_data:
-                chart_data = json.loads(chart.chart_data)
-            elif chart.reporting_structure:
-                # For backward compatibility
-                chart_data = json.loads(chart.reporting_structure)
+    # Check if we're viewing an existing chart by ID (GET request)
+    if request.method == 'GET':
+        chart_id = request.args.get('id')
+        
+        if chart_id:
+            try:
+                # Get the org chart from the database
+                chart = OrgChart.query.get(chart_id)
                 
-            # Set up template variables
-            return render_template(
-                'org_chart.html',
-                company_name=chart.organization.name,
-                department_name=chart.department.name if chart.department else '',
-                chart_data=json.dumps(chart_data),
-                reporting_line=chart.reporting_line_type or chart.view_type or 'hierarchical',
-                chart_id=chart.id,
-                chart_title=chart.name,
-                view_type=chart.view_type
-            )
-        except Exception as e:
-            logging.error(f"Error loading org chart: {e}")
+                if not chart:
+                    # If chart not found, redirect to home
+                    logging.error(f"Org chart with ID {chart_id} not found")
+                    return redirect('/')
+                
+                # Get the chart data
+                chart_data = None
+                if chart.chart_data:
+                    chart_data = json.loads(chart.chart_data)
+                elif chart.reporting_structure:
+                    # For backward compatibility
+                    chart_data = json.loads(chart.reporting_structure)
+                    
+                # Set up template variables
+                return render_template(
+                    'org_chart.html',
+                    company_name=chart.organization.name,
+                    department_name=chart.department.name if chart.department else '',
+                    chart_data=json.dumps(chart_data),
+                    reporting_line=chart.reporting_line_type or chart.view_type or 'hierarchical',
+                    chart_id=chart.id,
+                    chart_title=chart.name,
+                    view_type=chart.view_type
+                )
+            except Exception as e:
+                logging.error(f"Error loading org chart: {e}")
+                return redirect('/')
+        
+        # Regular GET parameters for new charts (backward compatibility)
+        company_name = request.args.get('company_name', '')
+        department_name = request.args.get('department_name', '')
+        org_structure = request.args.get('org_structure', '')
+        reporting_line = request.args.get('reporting_line', '')
+        
+        return render_template(
+            'org_chart.html',
+            company_name=company_name,
+            department_name=department_name,
+            org_structure=org_structure,
+            reporting_line=reporting_line
+        )
+    
+    # Handle POST request from the form submission
+    elif request.method == 'POST':
+        # Get form data
+        company_name = request.form.get('company_name', '')
+        department_name = request.form.get('department_name', '')
+        org_structure = request.form.get('org_structure', '')
+        reporting_line = request.form.get('reporting_line', '')
+        
+        # Validate required fields
+        if not company_name or not org_structure:
+            # If validation fails, redirect back to the form
             return redirect('/')
-    
-    # Regular parameters for new charts
-    company_name = request.args.get('company_name', '')
-    department_name = request.args.get('department_name', '')
-    org_structure = request.args.get('org_structure', '')
-    reporting_line = request.args.get('reporting_line', '')
-    
-    return render_template(
-        'org_chart.html',
-        company_name=company_name,
-        department_name=department_name,
-        org_structure=org_structure,
-        reporting_line=reporting_line
-    )
+        
+        # Render the org chart template with the form data
+        return render_template(
+            'org_chart.html',
+            company_name=company_name,
+            department_name=department_name,
+            org_structure=org_structure,
+            reporting_line=reporting_line
+        )
 
 @app.route('/api/parse-org-data', methods=['POST'])
 def parse_org_data():
