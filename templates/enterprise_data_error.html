@@ -39,6 +39,12 @@
                 <div class="message-box">
                     <p><strong>Error:</strong> There was a problem generating the enterprise organization data. This could be due to database connection issues or conflicts with existing data.</p>
                     <p>You can try again or return to the home page.</p>
+                    {% if error_details %}
+                    <details>
+                        <summary>Technical Details (Click to expand)</summary>
+                        <pre style="background-color: #f8f8f8; padding: 10px; overflow: auto; max-height: 200px;">{{ error_details }}</pre>
+                    </details>
+                    {% endif %}
                 </div>
                 
                 <div class="btn-container">

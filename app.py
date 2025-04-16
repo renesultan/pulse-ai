@@ -47,13 +47,22 @@ def index():
 def generate_enterprise_example():
     """Generate enterprise example data and redirect to index"""
     from utils.enterprise_data_generator import generate_enterprise_data, get_enterprise_example_text
+    import traceback
     
-    success = generate_enterprise_data()
-    if success:
-        example_text = get_enterprise_example_text()
-        return render_template('enterprise_data_success.html', example_text=example_text)
-    else:
-        return render_template('enterprise_data_error.html')
+    try:
+        success = generate_enterprise_data()
+        if success:
+            example_text = get_enterprise_example_text()
+            return render_template('enterprise_data_success.html', example_text=example_text)
+        else:
+            logging.error("Enterprise data generation returned False")
+            return render_template('enterprise_data_error.html')
+    except Exception as e:
+        error_msg = str(e)
+        tb = traceback.format_exc()
+        logging.error(f"Error generating enterprise data: {error_msg}")
+        logging.error(f"Traceback: {tb}")
+        return render_template('enterprise_data_error.html', error_details=error_msg)
 
 @app.route('/org-chart')
 def org_chart():

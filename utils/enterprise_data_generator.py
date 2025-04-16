@@ -546,17 +546,34 @@ def generate_enterprise_data():
                 if not reset_database():
                     return False
                 
-            # Clean existing data
-            db.session.query(secondary_reports).delete()
-            db.session.query(project_members).delete()
-            db.session.query(OrgChart).delete()
-            db.session.query(Employee).delete()
-            db.session.query(Project).delete()
-            db.session.query(Department).delete()
-            db.session.query(Location).delete()
-            db.session.query(Region).delete()
-            db.session.query(Organization).delete()
-            db.session.commit()
+            # Clean existing data - optimized to use fewer database operations
+            try:
+                # Clean data in a single transaction with fewer operations
+                print("Cleaning existing data...")
+                # Delete association tables first
+                db.session.execute(db.delete(secondary_reports))
+                db.session.execute(db.delete(project_members))
+                
+                # Then delete entity tables in the correct order to avoid foreign key constraints
+                db.session.execute(db.delete(OrgChart))
+                db.session.execute(db.delete(Employee))
+                db.session.execute(db.delete(Project))
+                db.session.execute(db.delete(Department))
+                db.session.execute(db.delete(Location))
+                db.session.execute(db.delete(Region))
+                db.session.execute(db.delete(Organization))
+                
+                # Commit the transaction
+                db.session.commit()
+                print("Existing data cleaned successfully")
+            except Exception as e:
+                db.session.rollback()
+                print(f"Error cleaning existing data: {e}")
+                # If we can't clean the data, we should reset the database
+                print("Attempting to reset database...")
+                from utils.reset_database import reset_database
+                if not reset_database():
+                    return False
             
             print("Creating organization...")
             # Create organization
