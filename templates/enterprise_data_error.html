@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - F*ck Meetings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .message-box {
+            background-color: #fff0f0;
+            border-left: 4px solid #ff4d4d;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>F*ck Meetings</h1>
+            <p class="tagline">Instant visibility across your org. Zero unnecessary meetings.</p>
+        </header>
+        
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Error Generating Data</h2>
+                    <p class="subtitle">We encountered an issue while generating enterprise data</p>
+                </div>
+                
+                <div class="message-box">
+                    <p><strong>Error:</strong> There was a problem generating the enterprise organization data. This could be due to database connection issues or conflicts with existing data.</p>
+                    <p>You can try again or return to the home page.</p>
+                </div>
+                
+                <div class="btn-container">
+                    <a href="/" class="btn-secondary">Back to Home</a>
+                    <a href="/generate-enterprise-example" class="btn-primary">Try Again</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>BOND App, Inc. © 2025</p>
+        </footer>
+    </div>
+</body>
+</html>

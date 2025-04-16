@@ -1,0 +1,40 @@
+Yes, the prompt I provided is accurate based on how large tech companies are typically organized, but I can make a few improvements to make it even better for your specific task. Here's a refined version:
+
+# Prompt for Replit AI: Generate Enterprise-Scale Data for "F*ck Meetings" - Matrix Structure
+
+Create an enterprise-grade sample dataset for our "F*ck Meetings" org chart visualization that accurately simulates how Fortune 500 tech companies structure their organizations, with emphasis on the matrix reporting system that causes visibility challenges across projects.
+
+## Enhanced Data Format:
+```
+[EmployeeID], [Name], [Title], [Department], [DepartmentCode], [Location], [ReportsTo_Primary], [ReportsTo_Secondary], [ProjectAssignments], [CostCenter]
+```
+
+## Dataset Specifications:
+
+1. **True Matrix Organizational Structure:**
+   - Model a grid-like structure with both vertical hierarchy (functional reporting) and horizontal project teams
+   - Create dual reporting relationships where employees report to both department heads and project managers
+   - Include 8-10 major functional departments (Engineering, Product, etc.) as the vertical dimension
+   - Create 12-15 cross-functional projects as the horizontal dimension
+   - Use the "two-pizza team" concept for project teams (small, nimble teams of 6-10 people)
+
+2. **Realistic Hierarchy Depth:**
+   - C-Suite executives at the top (CEO, CTO, CFO, COO, etc.)
+   - SVPs/VPs of major divisions reporting to C-Suite
+   - Directors reporting to VPs
+   - Senior Managers/Managers reporting to Directors
+   - Total of 150-200 managers and executives in the dataset
+
+3. **Global Enterprise Elements:**
+   - Include regional divisions (Americas, EMEA, APAC)
+   - Add location codes to employees (HQ, regional offices, remote)
+   - Create region-specific reporting lines alongside functional reporting
+   - Include timezone and cross-geography collaboration challenges
+
+4. **Project Visibility Challenges:**
+   - Create scenarios where strategic initiatives flow across 5+ departments
+   - Include projects with different urgency levels and executive sponsorship
+   - Add indicators for meeting frequency and communication channels
+   - Show how information gets siloed between functional teams working on the same project
+
+This dataset should demonstrate exactly why executives struggle with visibility in matrix organizations and how our tool solves this problem. When visualized, it should create an impressive, complex but clean org chart that shows both reporting hierarchies and project teams simultaneously.

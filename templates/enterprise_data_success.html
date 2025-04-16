@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Data Generated - F*ck Meetings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .message-box {
+            background-color: #f0f8ff;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .code-block {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>F*ck Meetings</h1>
+            <p class="tagline">Instant visibility across your org. Zero unnecessary meetings.</p>
+        </header>
+        
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Enterprise Data Generated</h2>
+                    <p class="subtitle">Matrix organization data has been successfully created</p>
+                </div>
+                
+                <div class="message-box">
+                    <p><strong>Success!</strong> The enterprise-scale matrix organization data has been generated and stored in the database.</p>
+                    <p>TechNova Global now exists in the database with a full matrix organizational structure including:</p>
+                    <ul>
+                        <li>Hierarchical and matrix reporting relationships</li>
+                        <li>Cross-functional project teams</li>
+                        <li>Global regional divisions</li>
+                        <li>Departmental structure</li>
+                    </ul>
+                </div>
+                
+                <p>Copy the text below to visualize the executive and leadership structure:</p>
+                
+                <div class="code-block">{{ example_text }}</div>
+                
+                <div class="btn-container">
+                    <a href="/" class="btn-primary">Back to Home</a>
+                    <button id="copyBtn" class="btn-secondary">Copy Example Text</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>BOND App, Inc. © 2025</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const codeBlock = document.querySelector('.code-block');
+            const textArea = document.createElement('textarea');
+            textArea.value = codeBlock.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            this.textContent = 'Copied!';
+            setTimeout(() => {
+                this.textContent = 'Copy Example Text';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
