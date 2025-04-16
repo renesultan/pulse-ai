@@ -8,6 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Include D3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        // Add debug logging
+        console.log("Org Chart template initialized");
+        {% if chart_data %}
+            console.log("Chart data is available from server");
+        {% else %}
+            console.log("No chart data from server, will need to process via API");
+        {% endif %}
+        
+        // Log template variables for debugging
+        console.log("Company name:", "{{ company_name }}");
+        console.log("Department name:", "{{ department_name }}");
+        console.log("Reporting line:", "{{ reporting_line }}");
+        console.log("Organization structure length:", "{{ org_structure|length }}");
+    </script>
 </head>
 <body>
     <div class="container">

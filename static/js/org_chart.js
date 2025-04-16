@@ -13,24 +13,29 @@ document.addEventListener('DOMContentLoaded', async function() {
     let hierarchyData;
     
     try {
-        // Check if we have pre-loaded chart data (from database)
-        if (chartDataElement) {
-            console.log("Using pre-loaded chart data from database");
-            hierarchyData = JSON.parse(chartDataElement.dataset.chartData);
-            
-            // Update the page title with chart title if available
-            if (chartTitleElement) {
-                document.title = `${chartTitleElement.dataset.chartTitle} - F*ck Meetings`;
+        // Check if we have pre-loaded chart data (from database or server-processed)
+        if (chartDataElement && chartDataElement.dataset.chartData) {
+            console.log("Using pre-loaded chart data");
+            try {
+                hierarchyData = JSON.parse(chartDataElement.dataset.chartData);
+                
+                // Update the page title with chart title if available
+                if (chartTitleElement) {
+                    document.title = `${chartTitleElement.dataset.chartTitle} - F*ck Meetings`;
+                }
+            } catch (e) {
+                console.error("Error parsing chart data:", e);
+                throw new Error('Invalid chart data format');
             }
         } else {
-            // Use manual org structure input for parsing
+            // Use manual org structure input for parsing via API
             const orgStructureText = document.getElementById('org-structure-data').dataset.orgStructure;
             
             if (!orgStructureText) {
                 throw new Error('No organization data found');
             }
             
-            console.log("Parsing organization structure from text input");
+            console.log("Parsing organization structure from text input via API");
             
             // Send the org structure to the API for parsing
             const response = await fetch('/api/parse-org-data', {
@@ -43,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                     company_name: companyName,
                     department_name: departmentName,
                     reporting_line: reportingLine,
-                    save_to_db: true // Save to database
+                    save_to_db: false // Don't save to database by default
                 })
             });
             
@@ -52,6 +57,10 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
             
             hierarchyData = await response.json();
+        }
+        
+        if (!hierarchyData || (typeof hierarchyData === 'object' && Object.keys(hierarchyData).length === 0)) {
+            throw new Error('No valid organization data could be processed');
         }
         
         // Initialize the org chart with the data

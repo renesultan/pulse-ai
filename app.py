@@ -156,19 +156,48 @@ def org_chart():
         org_structure = request.form.get('org_structure', '')
         reporting_line = request.form.get('reporting_line', '')
         
+        logging.info(f"POST to /org-chart received with company={company_name}, dept={department_name}")
+        logging.info(f"Organization structure length: {len(org_structure or '')}")
+        
         # Validate required fields
         if not company_name or not org_structure:
+            logging.error("Missing required fields in POST data")
             # If validation fails, redirect back to the form
             return redirect('/')
         
-        # Render the org chart template with the form data
-        return render_template(
-            'org_chart.html',
-            company_name=company_name,
-            department_name=department_name,
-            org_structure=org_structure,
-            reporting_line=reporting_line
-        )
+        try:
+            # Process the org structure and convert it to a hierarchical format
+            logging.info("Processing organization structure...")
+            hierarchy = parse_org_structure(org_structure)
+            
+            logging.info(f"Successfully created hierarchy with {len(hierarchy.get('children', []))} top-level nodes")
+            
+            # Optionally save the org chart data to the database
+            # We're not saving here automatically, but we could
+            
+            # Render the org chart template with the processed data
+            logging.info("Rendering org_chart.html template with processed data")
+            return render_template(
+                'org_chart.html',
+                company_name=company_name,
+                department_name=department_name,
+                org_structure=org_structure,
+                reporting_line=reporting_line,
+                chart_data=json.dumps(hierarchy)  # Pass the processed hierarchical data
+            )
+        except Exception as e:
+            logging.error(f"Error processing org chart data: {e}")
+            import traceback
+            logging.error(traceback.format_exc())
+            
+            # If processing fails, render the template with just the raw data
+            return render_template(
+                'org_chart.html',
+                company_name=company_name,
+                department_name=department_name,
+                org_structure=org_structure,
+                reporting_line=reporting_line
+            )
 
 @app.route('/api/parse-org-data', methods=['POST'])
 def parse_org_data():
