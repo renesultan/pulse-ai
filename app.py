@@ -44,26 +44,56 @@ with app.app_context():
 def index():
     return render_template('index.html')
 
-@app.route('/generate-enterprise-example')
-def generate_enterprise_example():
-    """Generate enterprise example data and redirect to index"""
-    from utils.enterprise_data_generator import generate_enterprise_data, get_enterprise_example_text
-    import traceback
-    
+@app.route('/api/get-enterprise-example')
+def get_enterprise_example():
+    """Get enterprise example data for populating the form"""
     try:
-        success = generate_enterprise_data()
-        if success:
-            example_text = get_enterprise_example_text()
-            return render_template('enterprise_data_success.html', example_text=example_text)
-        else:
-            logging.error("Enterprise data generation returned False")
-            return render_template('enterprise_data_error.html')
+        # Get the first organization (TechNova Global from our sample data)
+        org = Organization.query.first()
+        
+        if not org:
+            return jsonify({"error": "No sample organization found"}), 404
+        
+        # Get the CEO (first executive)
+        ceo = Employee.query.filter_by(organization_id=org.id, primary_manager_id=None).first()
+        
+        if not ceo:
+            return jsonify({"error": "No CEO found in sample data"}), 404
+            
+        # Fetch all employees to build the org structure text
+        employees = Employee.query.filter_by(organization_id=org.id).all()
+        
+        # Build organization structure text in the format: Name, Title, Reports To
+        org_structure_lines = []
+        for emp in employees:
+            # The CEO doesn't report to anyone
+            if emp.id == ceo.id:
+                org_structure_lines.append(f"{emp.name}, {emp.title}")
+            else:
+                # Get the primary manager's name
+                manager = None
+                if emp.primary_manager_id:
+                    manager = Employee.query.get(emp.primary_manager_id)
+                elif emp.reports_to_id:  # Fallback to reports_to for backward compatibility
+                    manager = Employee.query.get(emp.reports_to_id)
+                    
+                if manager:
+                    org_structure_lines.append(f"{emp.name}, {emp.title}, {manager.name}")
+                else:
+                    org_structure_lines.append(f"{emp.name}, {emp.title}")
+        
+        # Create the response data
+        response_data = {
+            "companyName": org.name,
+            "departmentName": "Executive Leadership",  # Default to executive department for the overview
+            "orgStructure": "\n".join(org_structure_lines),
+            "reportingLine": "matrix"  # Using matrix as our example showcases matrix organization
+        }
+        
+        return jsonify(response_data)
     except Exception as e:
-        error_msg = str(e)
-        tb = traceback.format_exc()
-        logging.error(f"Error generating enterprise data: {error_msg}")
-        logging.error(f"Traceback: {tb}")
-        return render_template('enterprise_data_error.html', error_details=error_msg)
+        logging.error(f"Error fetching enterprise example data: {str(e)}")
+        return jsonify({"error": "Failed to fetch enterprise example data"}), 500
 
 @app.route('/org-chart')
 def org_chart():

@@ -6,32 +6,50 @@ document.addEventListener('DOMContentLoaded', function() {
     const reportingLineSelect = document.getElementById('reportingLine');
     const exampleButton = document.getElementById('btnExample');
 
-    // Sample data for "Try an example" button
-    const exampleData = {
-        companyName: 'Hoolie',
-        departmentName: 'Engineering',
-        orgStructure: 'Richard Hendricks, CEO\n' +
-                     'Bertram Gilfoyle, CTO, Richard Hendricks\n' +
-                     'Dinesh Chugtai, Lead Engineer, Bertram Gilfoyle\n' +
-                     'Jared Dunn, COO, Richard Hendricks\n' +
-                     'Monica Hall, CFO, Richard Hendricks\n' +
-                     'Nelson Bighetti, Programmer, Dinesh Chugtai',
-        reportingLine: 'hierarchical'
-    };
-
-    // Load example data
-    exampleButton.addEventListener('click', function(e) {
+    // Load enterprise example data from the database
+    exampleButton.addEventListener('click', async function(e) {
         e.preventDefault();
-        companyNameInput.value = exampleData.companyName;
-        departmentNameInput.value = exampleData.departmentName;
-        orgStructureInput.value = exampleData.orgStructure;
         
-        // Select the value in the dropdown
-        Array.from(reportingLineSelect.options).forEach(option => {
-            if (option.value === exampleData.reportingLine) {
-                option.selected = true;
+        // Show loading indicator
+        exampleButton.disabled = true;
+        exampleButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg> Loading...';
+        
+        try {
+            // Fetch enterprise example data from our API
+            const response = await fetch('/api/get-enterprise-example');
+            
+            if (!response.ok) {
+                throw new Error('Failed to fetch enterprise example data');
             }
-        });
+            
+            const exampleData = await response.json();
+            
+            // Populate the form with the fetched data
+            companyNameInput.value = exampleData.companyName;
+            departmentNameInput.value = exampleData.departmentName;
+            orgStructureInput.value = exampleData.orgStructure;
+            
+            // Select the value in the dropdown
+            Array.from(reportingLineSelect.options).forEach(option => {
+                if (option.value === exampleData.reportingLine) {
+                    option.selected = true;
+                }
+            });
+            
+            // Highlight the organization structure with a brief animation
+            orgStructureInput.style.transition = 'background-color 0.5s';
+            orgStructureInput.style.backgroundColor = '#f0f8ff';
+            setTimeout(() => {
+                orgStructureInput.style.backgroundColor = '';
+            }, 1000);
+        } catch (error) {
+            console.error('Error fetching enterprise example data:', error);
+            alert('Failed to load enterprise example data. Please try again.');
+        } finally {
+            // Restore the button
+            exampleButton.disabled = false;
+            exampleButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> Try an example';
+        }
     });
 
     // Form validation and submission
