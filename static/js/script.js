@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation
+    // Form validation and submission
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -56,9 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (isValid) {
-            // In a real app, this would process the form data
-            // For now, we'll just show a success message
-            alert('Organization chart creation initiated! This feature would generate an actual chart in the complete application.');
+            // Build the URL with query parameters
+            const params = new URLSearchParams({
+                company_name: companyNameInput.value,
+                department_name: departmentNameInput.value || '',
+                org_structure: orgStructureInput.value,
+                reporting_line: reportingLineSelect.value || ''
+            });
+            
+            // Navigate to the org chart page
+            window.location.href = `/org-chart?${params.toString()}`;
         }
     });
 
@@ -76,12 +83,19 @@ document.addEventListener('DOMContentLoaded', function() {
         errorSpan.style.marginTop = '5px';
         errorSpan.textContent = message;
         
-        input.parentNode.appendChild(errorSpan);
+        // Find the appropriate parent for appending the error message
+        const parent = input.parentNode.classList.contains('input-group') ? 
+            input.parentNode.parentNode : input.parentNode;
+            
+        parent.appendChild(errorSpan);
         input.style.borderColor = 'red';
     }
 
     function hideError(input) {
-        const parent = input.parentNode;
+        // Find the appropriate parent that might contain the error message
+        const parent = input.parentNode.classList.contains('input-group') ? 
+            input.parentNode.parentNode : input.parentNode;
+            
         const errorSpan = parent.querySelector('.error-message');
         if (errorSpan) {
             parent.removeChild(errorSpan);

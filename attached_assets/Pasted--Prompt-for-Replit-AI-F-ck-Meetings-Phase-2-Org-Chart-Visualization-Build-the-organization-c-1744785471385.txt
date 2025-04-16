@@ -1,0 +1,55 @@
+# Prompt for Replit AI: "F*ck Meetings" - Phase 2: Org Chart Visualization
+
+Build the organization chart visualization feature for the "F*ck Meetings" app, connecting our landing page form to a dynamic, interactive org chart display. This is what happens after users click the "Build Org Chart" button.
+
+## Functionality Requirements
+
+1. **Form Processing & Navigation**:
+   - Capture all data from the landing page form (Company Name, Department, Organization Structure, Default Reporting Line)
+   - When "Build Org Chart" is clicked, transition to a new canvas page while passing all form data
+
+2. **Org Chart Visualization**:
+   - Parse the text-based hierarchy from the form (format: Name, Title, Reports To)
+   - Generate a clean, visually appealing org chart with:
+     - Hierarchical nodes for each employee
+     - Clear reporting relationships displayed as connecting lines
+     - Employee name and title displayed in each node
+     - Proper spacing and alignment between nodes
+
+3. **Interactive Canvas Features**:
+   - Implement zoom in/out functionality
+   - Allow panning/moving around the chart
+   - Enable clicking on nodes to see more details
+   - Include a mini-map for navigation in larger charts
+
+4. **UI/UX Design Elements**:
+   - Use consistent, professional styling throughout
+   - Implement subtle animations for transitions and interactions
+   - Use a clean color scheme that highlights reporting relationships
+   - Ensure proper spacing and visual hierarchy
+   - Add subtle shadows and borders for depth without clutter
+
+5. **Toolbar Functionality**:
+   - Include tools for adjusting the view (zoom, pan)
+   - Provide options to export the chart (PNG, PDF)
+   - Allow basic customization (colors, layout direction)
+
+## Technical Implementation
+
+1. Use a lightweight organization chart library (like OrgChart.js, D3.js, or GoJS)
+2. Implement proper data parsing to convert the text input into a hierarchical data structure
+3. Ensure responsive design that works across different screen sizes
+4. Add smooth animations for transitions between screens
+5. Implement proper error handling for invalid hierarchical structures
+
+## Example Chart Structure
+Parse text input like:
+```
+Richard Hendricks, CEO
+Bertram Gilfoyle, CTO, Richard Hendricks
+Dinesh Chugtai, Lead Engineer, Bertram Gilfoyle
+```
+
+And generate a clean hierarchical visualization with Richard at the top, Bertram below him, and Dinesh below Bertram.
+
+The final product should give users a "wow" experience with its clean, professional appearance and intuitive navigation, while effectively communicating organizational structure at a glance.
