@@ -203,45 +203,117 @@
     <!-- JavaScript for directly providing chart data to D3.js -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Chart data directly from server
-            const orgChartData = {{ chart_data|safe }};
+            console.log("DOM content loaded - starting chart initialization");
             
-            // Initialize org chart visualization
-            initOrgChart(orgChartData);
-            
-            // Initialize UI event listeners
-            initUIEventListeners();
+            try {
+                // Chart data directly from server
+                const orgChartData = {{ chart_data|safe }};
+                
+                // Debug Chart Data
+                console.log("Chart data type:", typeof orgChartData);
+                console.log("Chart data keys:", Object.keys(orgChartData));
+                console.log("Chart data structure sample:", JSON.stringify(orgChartData).substring(0, 1000));
+                
+                if(orgChartData.children) {
+                    console.log("Number of children:", orgChartData.children.length);
+                    console.log("First 3 children:", orgChartData.children.slice(0, 3));
+                } else {
+                    console.error("No children property found in chart data");
+                }
+                
+                // Initialize org chart visualization
+                console.log("About to initialize org chart");
+                initOrgChart(orgChartData);
+                console.log("Org chart initialized successfully");
+                
+                // Initialize UI event listeners
+                initUIEventListeners();
+                console.log("UI event listeners initialized");
+            } catch(error) {
+                console.error("Error initializing chart:", error);
+                document.querySelector('.loading-overlay').innerHTML = 
+                    `<div style="color:red;background:white;padding:20px;border-radius:5px">
+                        Error initializing chart: ${error.message}<br>
+                        <pre>${error.stack}</pre>
+                    </div>`;
+            }
         });
 
         function initOrgChart(data) {
-            // Get container dimensions
-            const container = document.getElementById('chart-container');
-            const width = container.clientWidth;
-            const height = container.clientHeight;
+            console.log("Inside initOrgChart function");
             
-            // Define node dimensions
-            const nodeWidth = 180;
-            const nodeHeight = 80;
-            const nodeSpacing = 50;
+            // Debug data
+            console.log("Data passed to initOrgChart:", JSON.stringify(data).substring(0, 300) + '...');
             
-            // Create D3 tree layout
-            const root = d3.hierarchy(data);
-            
-            // Count descendants to determine tree dimensions
-            const leaves = root.leaves();
-            const depth = root.height;
-            
-            // Calculate dimensions based on the number of nodes
-            const treeWidth = Math.max(width, leaves.length * (nodeWidth + nodeSpacing));
-            const treeHeight = Math.max(height, (depth + 1) * (nodeHeight + nodeSpacing * 2));
-            
-            // Create the tree layout
-            const treeLayout = d3.tree()
-                .size([treeWidth - nodeWidth * 2, treeHeight - nodeHeight * 2])
-                .nodeSize([nodeWidth + nodeSpacing, nodeHeight + nodeSpacing]);
+            try {
+                // Get container dimensions
+                const container = document.getElementById('chart-container');
+                if (!container) {
+                    console.error("Chart container element not found!");
+                    throw new Error("Chart container element not found!");
+                }
                 
-            // Compute the layout
-            treeLayout(root);
+                console.log("Container dimensions:", container.clientWidth, container.clientHeight);
+                const width = container.clientWidth;
+                const height = container.clientHeight;
+                
+                // Define node dimensions
+                const nodeWidth = 180;
+                const nodeHeight = 80;
+                const nodeSpacing = 50;
+                
+                console.log("Creating D3 hierarchy from data");
+                // Create D3 tree layout
+                if (!data) {
+                    console.error("No data provided to the chart");
+                    throw new Error("No data provided to the chart");
+                }
+                
+                const root = d3.hierarchy(data);
+                console.log("D3 hierarchy created:", root);
+                
+                // Count descendants to determine tree dimensions
+                const leaves = root.leaves();
+                console.log("Leaf count:", leaves.length);
+                
+                const depth = root.height;
+                console.log("Tree depth:", depth);
+            } catch (e) {
+                console.error("Error in chart initialization:", e);
+                document.querySelector('.loading-overlay').innerHTML = 
+                    `<div style="color:red;background:white;padding:20px;border-radius:5px">
+                        Error initializing chart: ${e.message}<br>
+                        <pre>${e.stack}</pre>
+                    </div>`;
+                throw e;
+            }
+            
+            try {
+                // Calculate dimensions based on the number of nodes
+                console.log("Calculating tree dimensions");
+                const treeWidth = Math.max(width, leaves.length * (nodeWidth + nodeSpacing));
+                const treeHeight = Math.max(height, (depth + 1) * (nodeHeight + nodeSpacing * 2));
+                console.log("Tree dimensions:", treeWidth, treeHeight);
+                
+                // Create the tree layout
+                console.log("Creating D3 tree layout");
+                const treeLayout = d3.tree()
+                    .size([treeWidth - nodeWidth * 2, treeHeight - nodeHeight * 2])
+                    .nodeSize([nodeWidth + nodeSpacing, nodeHeight + nodeSpacing]);
+                
+                // Compute the layout
+                console.log("Computing tree layout");
+                treeLayout(root);
+                console.log("Tree layout computed successfully");
+            } catch (e) {
+                console.error("Error in tree layout calculation:", e);
+                document.querySelector('.loading-overlay').innerHTML = 
+                    `<div style="color:red;background:white;padding:20px;border-radius:5px">
+                        Error in tree layout: ${e.message}<br>
+                        <pre>${e.stack}</pre>
+                    </div>`;
+                throw e;
+            }
             
             // Create SVG element
             const svg = d3.select('#chart-container')

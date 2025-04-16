@@ -175,12 +175,27 @@ def org_chart():
             # Render the direct chart template with the processed data
             # This template has the D3 code directly embedded to avoid JSON parsing issues
             logging.info("Rendering direct_chart.html template with processed data")
+            
+            # Debug the hierarchy data
+            logging.info(f"Chart data type: {type(hierarchy)}")
+            logging.info(f"Chart data structure: {hierarchy.keys() if isinstance(hierarchy, dict) else 'Not a dict'}")
+            logging.info(f"Children count: {len(hierarchy.get('children', [])) if isinstance(hierarchy, dict) else 'No children'}")
+            
+            # Enhanced debugging of first level
+            if isinstance(hierarchy, dict) and 'children' in hierarchy:
+                for i, child in enumerate(hierarchy.get('children', [])[:5]):  # Show first 5 children
+                    logging.info(f"Child {i}: {child.get('name', 'No name')} - {child.get('title', 'No title')}")
+            
+            # Dump the JSON with indentation for easier debugging
+            chart_data_json = json.dumps(hierarchy, indent=2)
+            logging.info(f"First 500 chars of JSON data: {chart_data_json[:500]}...")
+            
             return render_template(
                 'direct_chart.html',
                 company_name=company_name,
                 department_name=department_name,
                 reporting_line=reporting_line,
-                chart_data=json.dumps(hierarchy)  # Pass the processed hierarchical data
+                chart_data=chart_data_json  # Pass the processed hierarchical data with nice formatting
             )
         except Exception as e:
             logging.error(f"Error processing org chart data: {e}")
@@ -306,15 +321,20 @@ def save_employees(org_structure_text, organization_id, department_id=None):
 def parse_org_structure(org_structure_text):
     """Parse the org structure text into a hierarchical JSON format for D3.js"""
     if not org_structure_text:
+        logging.warning("Empty org structure text provided")
         return {}
     
     # Split the input text into lines
     lines = org_structure_text.strip().split('\n')
+    logging.info(f"Processing {len(lines)} lines of org structure")
     
     # Dictionary to store all employees by name for quick lookup
     employees = {}
     
     # First pass: Create all employee nodes
+    for i, line in enumerate(lines[:5]):  # Debug first 5 lines
+        logging.debug(f"Processing line {i}: {line}")
+    
     for line in lines:
         parts = [part.strip() for part in line.split(',')]
         if len(parts) >= 2:  # At least name and title
@@ -327,8 +347,12 @@ def parse_org_structure(org_structure_text):
                 'children': []
             }
     
+    logging.info(f"Created {len(employees)} employee nodes")
+    
     # Second pass: Establish reporting relationships
     root_nodes = []
+    child_count = 0
+    
     for line in lines:
         parts = [part.strip() for part in line.split(',')]
         if len(parts) >= 2:  # At least name and title
@@ -338,21 +362,41 @@ def parse_org_structure(org_structure_text):
             if len(parts) >= 3 and parts[2] in employees:
                 reports_to = parts[2]
                 employees[reports_to]['children'].append(employees[name])
+                child_count += 1
             else:
                 # This is a root node (no manager specified)
                 root_nodes.append(employees[name])
     
+    logging.info(f"Found {len(root_nodes)} root nodes and {child_count} reporting relationships")
+    
     # Create the final hierarchy
+    result = None
     if len(root_nodes) == 1:
         # Single root node (CEO or similar)
-        return root_nodes[0]
+        logging.info(f"Using single root node: {root_nodes[0]['name']}")
+        result = root_nodes[0]
     else:
         # Multiple root nodes, create a virtual root
-        return {
+        logging.info(f"Creating virtual root node for {len(root_nodes)} root nodes")
+        result = {
             'name': 'Organization',
             'title': '',
             'children': root_nodes
         }
+    
+    # Debug the result
+    if result and isinstance(result, dict):
+        child_count = len(result.get('children', []))
+        logging.info(f"Final hierarchy has {child_count} top-level children")
+        
+        if child_count > 0:
+            first_child = result['children'][0]
+            logging.info(f"First child: {first_child.get('name', 'No name')} - {first_child.get('title', 'No title')}")
+            
+            grandchild_count = len(first_child.get('children', []))
+            logging.info(f"First child has {grandchild_count} children of its own")
+    
+    return result
 
 @app.route('/api/charts', methods=['GET'])
 def get_org_charts():
