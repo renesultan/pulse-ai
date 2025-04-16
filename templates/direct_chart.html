@@ -278,6 +278,16 @@
                 
                 const depth = root.height;
                 console.log("Tree depth:", depth);
+                
+                // Save all the variables we need outside this try/catch block
+                const savedWidth = width;
+                const savedHeight = height;
+                const savedNodeWidth = nodeWidth;
+                const savedNodeHeight = nodeHeight;
+                const savedNodeSpacing = nodeSpacing;
+                const savedLeaves = leaves;
+                const savedDepth = depth;
+                const savedRoot = root;
             } catch (e) {
                 console.error("Error in chart initialization:", e);
                 document.querySelector('.loading-overlay').innerHTML = 
@@ -291,19 +301,19 @@
             try {
                 // Calculate dimensions based on the number of nodes
                 console.log("Calculating tree dimensions");
-                const treeWidth = Math.max(width, leaves.length * (nodeWidth + nodeSpacing));
-                const treeHeight = Math.max(height, (depth + 1) * (nodeHeight + nodeSpacing * 2));
+                const treeWidth = Math.max(savedWidth, savedLeaves.length * (savedNodeWidth + savedNodeSpacing));
+                const treeHeight = Math.max(savedHeight, (savedDepth + 1) * (savedNodeHeight + savedNodeSpacing * 2));
                 console.log("Tree dimensions:", treeWidth, treeHeight);
                 
                 // Create the tree layout
                 console.log("Creating D3 tree layout");
                 const treeLayout = d3.tree()
-                    .size([treeWidth - nodeWidth * 2, treeHeight - nodeHeight * 2])
-                    .nodeSize([nodeWidth + nodeSpacing, nodeHeight + nodeSpacing]);
+                    .size([treeWidth - savedNodeWidth * 2, treeHeight - savedNodeHeight * 2])
+                    .nodeSize([savedNodeWidth + savedNodeSpacing, savedNodeHeight + savedNodeSpacing]);
                 
                 // Compute the layout
                 console.log("Computing tree layout");
-                treeLayout(root);
+                treeLayout(savedRoot);
                 console.log("Tree layout computed successfully");
             } catch (e) {
                 console.error("Error in tree layout calculation:", e);
@@ -320,7 +330,7 @@
                 .append('svg')
                 .attr('width', '100%')
                 .attr('height', '100%')
-                .attr('viewBox', [-nodeWidth, -nodeHeight, treeWidth, treeHeight].join(' '))
+                .attr('viewBox', [-savedNodeWidth, -savedNodeHeight, treeWidth, treeHeight].join(' '))
                 .call(d3.zoom()
                     .scaleExtent([0.1, 3])
                     .on('zoom', function(event) {
@@ -337,26 +347,26 @@
             const links = g.append('g')
                 .attr('class', 'links')
                 .selectAll('path')
-                .data(root.links())
+                .data(savedRoot.links())
                 .enter()
                 .append('path')
                 .attr('class', 'link')
                 .attr('d', d => {
-                    return `M${d.source.x},${d.source.y + nodeHeight / 2}
+                    return `M${d.source.x},${d.source.y + savedNodeHeight / 2}
                             C${d.source.x},${(d.source.y + d.target.y) / 2}
                              ${d.target.x},${(d.source.y + d.target.y) / 2}
-                             ${d.target.x},${d.target.y - nodeHeight / 2}`;
+                             ${d.target.x},${d.target.y - savedNodeHeight / 2}`;
                 });
             
             // Create node groups
             const nodes = g.append('g')
                 .attr('class', 'nodes')
                 .selectAll('.node')
-                .data(root.descendants())
+                .data(savedRoot.descendants())
                 .enter()
                 .append('g')
                 .attr('class', 'node')
-                .attr('transform', d => `translate(${d.x - nodeWidth / 2},${d.y - nodeHeight / 2})`)
+                .attr('transform', d => `translate(${d.x - savedNodeWidth / 2},${d.y - savedNodeHeight / 2})`)
                 .on('click', function(event, d) {
                     // Toggle selection
                     d3.selectAll('.node').classed('selected', false);
@@ -369,24 +379,24 @@
             
             // Create node rectangles
             nodes.append('rect')
-                .attr('width', nodeWidth)
-                .attr('height', nodeHeight)
+                .attr('width', savedNodeWidth)
+                .attr('height', savedNodeHeight)
                 .attr('rx', 6)
                 .attr('ry', 6);
             
             // Add name text
             nodes.append('text')
                 .attr('class', 'name')
-                .attr('x', nodeWidth / 2)
-                .attr('y', nodeHeight / 3)
+                .attr('x', savedNodeWidth / 2)
+                .attr('y', savedNodeHeight / 3)
                 .attr('text-anchor', 'middle')
                 .text(d => d.data.name);
             
             // Add title text
             nodes.append('text')
                 .attr('class', 'title')
-                .attr('x', nodeWidth / 2)
-                .attr('y', nodeHeight / 3 + 20)
+                .attr('x', savedNodeWidth / 2)
+                .attr('y', savedNodeHeight / 3 + 20)
                 .attr('text-anchor', 'middle')
                 .text(d => d.data.title);
             
@@ -398,14 +408,14 @@
             
             // Center the tree initially
             const initialTransform = d3.zoomIdentity
-                .translate(width / 2, height / 3)
+                .translate(savedWidth / 2, savedHeight / 3)
                 .scale(0.7);
             
             svg.call(d3.zoom().transform, initialTransform);
             g.attr('transform', initialTransform);
             
             // Initialize mini-map
-            initMiniMap(root, treeWidth, treeHeight, initialTransform);
+            initMiniMap(savedRoot, treeWidth, treeHeight, initialTransform);
             
             // Initialize zoom controls
             initZoomControls(svg);
@@ -414,13 +424,13 @@
             window.orgChart = {
                 svg,
                 g,
-                root,
-                width,
-                height,
+                root: savedRoot,
+                width: savedWidth,
+                height: savedHeight,
                 treeWidth,
                 treeHeight,
-                nodeWidth,
-                nodeHeight
+                nodeWidth: savedNodeWidth,
+                nodeHeight: savedNodeHeight
             };
             
             // Hide loading overlay

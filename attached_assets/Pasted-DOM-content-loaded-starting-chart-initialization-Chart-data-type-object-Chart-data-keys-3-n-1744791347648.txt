@@ -1,0 +1,25 @@
+DOM content loaded - starting chart initialization
+Chart data type: object
+Chart data keys: 
+(3) ["name", "title", "children"]
+Chart data structure sample: {"name":"Organization","title":"","children":[{"name":"Sarah Chen","title":"Chief Executive Officer","children":[{"name":"Alex Rodriguez","title":"Chief Technology Officer","children":[]},{"name":"Mira Patel","title":"Chief Product Officer","children":[]},{"name":"James Wilson","title":"Chief Marketing Officer","children":[]},{"name":"David Klein","title":"Chief Revenue Officer","children":[]},{"name":"Emily Johnson","title":"Chief People Officer","children":[]},{"name":"Michael Chang","title":"Chief Financial Officer","children":[]},{"name":"Lauren Gonzalez","title":"General Counsel","children":[]},{"name":"Tom Watkins","title":"Chief Customer Officer","children":[]},{"name":"Rajesh Kumar","title":"Chief Information Officer","children":[]}]},{"name":"Kevin Zhang","title":"SVP","children":[]},{"name":"Lisa Wong","title":"VP","children":[]},{"name":"John Smith","title":"VP","children":[]},{"name":"Maria Santos","title":"VP","children":[]},{"name":"Omar Hassan","title":"VP","children":[]
+Number of children: 257
+First 3 children: 
+(3) [{…}, {…}, {…}]
+About to initialize org chart
+Inside initOrgChart function
+Data passed to initOrgChart: {"name":"Organization","title":"","children":[{"name":"Sarah Chen","title":"Chief Executive Officer","children":[{"name":"Alex Rodriguez","title":"Chief Technology Officer","children":[]},{"name":"Mira Patel","title":"Chief Product Officer","children":[]},{"name":"James Wilson","title":"Chief Market...
+Container dimensions: 863 847
+Creating D3 hierarchy from data
+D3 hierarchy created: 
+Qd {data: {…}, height: 2, depth: 0, parent: null, children: Array(257)}
+Leaf count: 269
+Tree depth: 2
+Calculating tree dimensions
+Error in tree layout calculation: 
+ReferenceError {}
+
+at t.value (https://61c09082-e9c4-4237-b46f-ca51cc931fa4-00-2g09a780e1vue.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://61c09082-e9c4-4237-b46f-ca51cc931fa4-00-2g09a780e1vue.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://61c09082-e9c4-4237-b46f-ca51cc931fa4-00-2g09a780e1vue.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://61c09082-e9c4-4237-b46f-ca51cc931fa4-00-2g09a780e1vue.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
