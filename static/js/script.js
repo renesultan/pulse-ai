@@ -1,0 +1,91 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('orgChartForm');
+    const companyNameInput = document.getElementById('companyName');
+    const departmentNameInput = document.getElementById('departmentName');
+    const orgStructureInput = document.getElementById('orgStructure');
+    const reportingLineSelect = document.getElementById('reportingLine');
+    const exampleButton = document.getElementById('btnExample');
+
+    // Sample data for "Try an example" button
+    const exampleData = {
+        companyName: 'Hoolie',
+        departmentName: 'Engineering',
+        orgStructure: 'Richard Hendricks, CEO\n' +
+                     'Bertram Gilfoyle, CTO, Richard Hendricks\n' +
+                     'Dinesh Chugtai, Lead Engineer, Bertram Gilfoyle\n' +
+                     'Jared Dunn, COO, Richard Hendricks\n' +
+                     'Monica Hall, CFO, Richard Hendricks\n' +
+                     'Nelson Bighetti, Programmer, Dinesh Chugtai',
+        reportingLine: 'hierarchical'
+    };
+
+    // Load example data
+    exampleButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        companyNameInput.value = exampleData.companyName;
+        departmentNameInput.value = exampleData.departmentName;
+        orgStructureInput.value = exampleData.orgStructure;
+        
+        // Select the value in the dropdown
+        Array.from(reportingLineSelect.options).forEach(option => {
+            if (option.value === exampleData.reportingLine) {
+                option.selected = true;
+            }
+        });
+    });
+
+    // Form validation
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let isValid = true;
+        
+        // Basic validation
+        if (!companyNameInput.value.trim()) {
+            showError(companyNameInput, 'Company name is required');
+            isValid = false;
+        } else {
+            hideError(companyNameInput);
+        }
+        
+        if (!orgStructureInput.value.trim()) {
+            showError(orgStructureInput, 'Organization structure is required');
+            isValid = false;
+        } else {
+            hideError(orgStructureInput);
+        }
+        
+        if (isValid) {
+            // In a real app, this would process the form data
+            // For now, we'll just show a success message
+            alert('Organization chart creation initiated! This feature would generate an actual chart in the complete application.');
+        }
+    });
+
+    // Helper functions for form validation
+    function showError(input, message) {
+        // Remove any existing error
+        hideError(input);
+        
+        // Create and add error message
+        const errorSpan = document.createElement('span');
+        errorSpan.className = 'error-message';
+        errorSpan.style.color = 'red';
+        errorSpan.style.fontSize = '0.8rem';
+        errorSpan.style.display = 'block';
+        errorSpan.style.marginTop = '5px';
+        errorSpan.textContent = message;
+        
+        input.parentNode.appendChild(errorSpan);
+        input.style.borderColor = 'red';
+    }
+
+    function hideError(input) {
+        const parent = input.parentNode;
+        const errorSpan = parent.querySelector('.error-message');
+        if (errorSpan) {
+            parent.removeChild(errorSpan);
+        }
+        input.style.borderColor = '';
+    }
+});

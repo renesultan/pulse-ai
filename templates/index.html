@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F*ck Meetings - Instant visibility across your org</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>F*ck Meetings</h1>
+            <p class="tagline">Instant visibility across your org. Zero unnecessary meetings.</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Create Organization Chart</h2>
+                    <p class="subtitle">Enter your organization details below</p>
+                </div>
+                
+                <form id="orgChartForm">
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <div class="input-group">
+                            <span class="input-icon">🏢</span>
+                            <input type="text" id="companyName" placeholder="Enter company or organization name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="departmentName">Department Name (Optional)</label>
+                        <input type="text" id="departmentName" placeholder="Enter department name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orgStructure">Organization Structure</label>
+                        <textarea id="orgStructure" placeholder="Enter team members (one per line): Name, Title, Reports To (optional)" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reportingLine">Default Reporting Line (Optional)</label>
+                        <div class="select-wrapper">
+                            <select id="reportingLine">
+                                <option value="" selected disabled>Select reporting structure</option>
+                                <option value="hierarchical">Hierarchical</option>
+                                <option value="matrix">Matrix</option>
+                                <option value="flat">Flat</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="buttons">
+                        <button type="submit" class="btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            Build Org Chart
+                        </button>
+                        <button type="button" id="btnExample" class="btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Try an example
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>BOND App, Inc. © 2025</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
