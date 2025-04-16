@@ -696,6 +696,7 @@ def generate_enterprise_data():
             for vp_data in ORG_CONFIG['vp_team']:
                 if vp_data['reports_to']:
                     employees[vp_data['name']].primary_manager_id = employees[vp_data['reports_to']].id
+                    employees[vp_data['name']].reports_to_id = employees[vp_data['reports_to']].id
             
             db.session.commit()
             
@@ -738,6 +739,7 @@ def generate_enterprise_data():
                         
                         if vp_name:
                             director.primary_manager_id = employees[vp_name].id
+                            director.reports_to_id = employees[vp_name].id
                     
                     # Create managers (2-3 per director)
                     for director in directors:
@@ -755,6 +757,7 @@ def generate_enterprise_data():
                                 department_id=dept.id,
                                 location_id=manager_location.id,
                                 primary_manager_id=director.id,
+                                reports_to_id=director.id,
                                 cost_center=dept.cost_center
                             )
                             db.session.add(manager)
@@ -807,7 +810,9 @@ def generate_enterprise_data():
                         
                         # Assign to a manager if available
                         if managers:
-                            employee.primary_manager_id = random.choice(managers).id
+                            manager = random.choice(managers)
+                            employee.primary_manager_id = manager.id
+                            employee.reports_to_id = manager.id
                         
                         db.session.add(employee)
                         db.session.flush()
