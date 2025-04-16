@@ -172,16 +172,13 @@ def org_chart():
             
             logging.info(f"Successfully created hierarchy with {len(hierarchy.get('children', []))} top-level nodes")
             
-            # Optionally save the org chart data to the database
-            # We're not saving here automatically, but we could
-            
-            # Render the org chart template with the processed data
-            logging.info("Rendering org_chart.html template with processed data")
+            # Render the direct chart template with the processed data
+            # This template has the D3 code directly embedded to avoid JSON parsing issues
+            logging.info("Rendering direct_chart.html template with processed data")
             return render_template(
-                'org_chart.html',
+                'direct_chart.html',
                 company_name=company_name,
                 department_name=department_name,
-                org_structure=org_structure,
                 reporting_line=reporting_line,
                 chart_data=json.dumps(hierarchy)  # Pass the processed hierarchical data
             )
@@ -190,14 +187,8 @@ def org_chart():
             import traceback
             logging.error(traceback.format_exc())
             
-            # If processing fails, render the template with just the raw data
-            return render_template(
-                'org_chart.html',
-                company_name=company_name,
-                department_name=department_name,
-                org_structure=org_structure,
-                reporting_line=reporting_line
-            )
+            # If processing fails, redirect back to the form with error indication
+            return redirect('/?error=chart_creation_failed')
 
 @app.route('/api/parse-org-data', methods=['POST'])
 def parse_org_data():
