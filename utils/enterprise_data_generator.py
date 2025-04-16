@@ -666,6 +666,7 @@ def generate_enterprise_data():
             for exec_data in ORG_CONFIG['executive_team']:
                 if exec_data['reports_to']:
                     employees[exec_data['name']].primary_manager_id = employees[exec_data['reports_to']].id
+                    employees[exec_data['name']].reports_to_id = employees[exec_data['reports_to']].id
             
             db.session.commit()
             
@@ -880,7 +881,7 @@ def generate_enterprise_data():
                 description="Traditional reporting structure by department",
                 organization_id=org.id,
                 view_type="hierarchical",
-                chart_data=generate_hierarchical_chart_data(org)
+                chart_data=json.dumps(generate_hierarchical_chart_data(org))
             )
             db.session.add(hierarchical_chart)
             
@@ -890,7 +891,7 @@ def generate_enterprise_data():
                 description="Cross-functional project teams with dual reporting lines",
                 organization_id=org.id,
                 view_type="matrix",
-                chart_data=generate_matrix_chart_data(org)
+                chart_data=json.dumps(generate_matrix_chart_data(org))
             )
             db.session.add(matrix_chart)
             
@@ -903,7 +904,7 @@ def generate_enterprise_data():
                         organization_id=org.id,
                         project_id=project.id,
                         view_type="project",
-                        chart_data=generate_project_chart_data(project)
+                        chart_data=json.dumps(generate_project_chart_data(project))
                     )
                     db.session.add(project_chart)
             

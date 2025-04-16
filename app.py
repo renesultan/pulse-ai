@@ -4,6 +4,7 @@ import json
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
+# JSONB import removed
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -32,7 +33,10 @@ db.init_app(app)
 
 # Import models after db is defined
 with app.app_context():
-    from models import Organization, Department, Employee, OrgChart
+    from models import (
+        Organization, Department, Employee, OrgChart,
+        Region, Location, Project, project_members, secondary_reports
+    )
     db.create_all()
 
 @app.route('/')

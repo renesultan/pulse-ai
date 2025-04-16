@@ -201,6 +201,104 @@ footer {
     color: #777;
 }
 
+/* Enterprise matrix organization styles */
+.enterprise-example {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.enterprise-example p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #9ca3af;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.divider span {
+    padding: 0 10px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-enterprise {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    margin-top: 10px;
+    background-color: #6946e5;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.btn-enterprise:hover {
+    background-color: #5838ca;
+}
+
+.code-block {
+    background-color: var(--input-bg);
+    padding: 15px;
+    border-radius: 6px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.message-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.message-box.success {
+    background-color: #f0f8ff;
+    border-left: 4px solid #4caf50;
+}
+
+.message-box.error {
+    background-color: #fff0f0;
+    border-left: 4px solid #ff4d4d;
+}
+
+.message-box ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .buttons {
@@ -224,5 +322,13 @@ footer {
     
     .card {
         padding: 1.5rem;
+    }
+    
+    .enterprise-example {
+        margin-top: 30px;
+    }
+    
+    .btn-container {
+        flex-direction: column;
     }
 }

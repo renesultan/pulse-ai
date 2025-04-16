@@ -1,6 +1,5 @@
 from app import db
 from datetime import datetime
-from sqlalchemy.dialects.postgresql import JSONB
 
 # Association tables for many-to-many relationships
 project_members = db.Table('project_members',
@@ -114,12 +113,17 @@ class Employee(db.Model):
     department_id = db.Column(db.Integer, db.ForeignKey('department.id'), nullable=True)
     location_id = db.Column(db.Integer, db.ForeignKey('location.id'), nullable=True)
     primary_manager_id = db.Column(db.Integer, db.ForeignKey('employee.id'), nullable=True)
+    reports_to_id = db.Column(db.Integer, db.ForeignKey('employee.id'), nullable=True)  # For backward compatibility
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     
     # Relationships
     direct_reports = db.relationship('Employee', 
                                     backref=db.backref('primary_manager', remote_side=[id]),
                                     foreign_keys=[primary_manager_id],
+                                    lazy=True)
+    manager_reports = db.relationship('Employee',  # For backward compatibility
+                                    backref=db.backref('manager', remote_side=[id]),
+                                    foreign_keys=[reports_to_id],
                                     lazy=True)
     secondary_managers = db.relationship('Employee',
                                        secondary=secondary_reports,
@@ -141,9 +145,11 @@ class OrgChart(db.Model):
     organization_id = db.Column(db.Integer, db.ForeignKey('organization.id'), nullable=False)
     department_id = db.Column(db.Integer, db.ForeignKey('department.id'), nullable=True)
     project_id = db.Column(db.Integer, db.ForeignKey('project.id'), nullable=True)  # For project-specific charts
-    view_type = db.Column(db.String(50), nullable=False, default='hierarchical')  # hierarchical, matrix, project
-    chart_data = db.Column(JSONB, nullable=True)  # JSON representation of the hierarchy
-    display_options = db.Column(JSONB, nullable=True)  # JSON for display settings
+    view_type = db.Column(db.String(50), nullable=True, default='hierarchical')  # hierarchical, matrix, project
+    reporting_line_type = db.Column(db.String(50), nullable=True)  # For backward compatibility
+    reporting_structure = db.Column(db.Text, nullable=True)  # For backward compatibility
+    chart_data = db.Column(db.Text, nullable=True)  # JSON representation of the hierarchy
+    display_options = db.Column(db.Text, nullable=True)  # JSON for display settings
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
