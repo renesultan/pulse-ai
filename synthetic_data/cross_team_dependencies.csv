@@ -1,0 +1,23 @@
+dependency_id,dependent_team_id,dependency_team_id,description,due_date,status,criticality,impact_description
+1,1,13,Need design assets from Marketplace Expansion team,2025-07-08,In Progress,Medium,Important dependency that affects multiple features in Atlas Platform Migration
+2,1,7,Dependent on infrastructure changes from API Gateway Implementation team,2025-05-15,Completed,Low,Minor dependency that can be worked around if needed
+3,1,15,Need design assets from Performance Optimization team,2025-06-02,In Progress,Medium,Important dependency that affects multiple features in Atlas Platform Migration
+4,8,6,Waiting for security review from Security Compliance Initiative team,2025-05-26,In Progress,High,Critical path item that will delay DevOps Automation delivery if not completed on time
+5,5,12,Dependent on infrastructure changes from Enterprise CRM Integration team,2025-06-10,Blocked,Low,Minor dependency that can be worked around if needed
+6,5,2,Dependent on infrastructure changes from Customer Portal Redesign team,2025-07-11,Not Started,Low,Minor dependency that can be worked around if needed
+7,5,3,Waiting for component delivery from Mobile App 2.0 team,2025-05-07,Completed,Low,Minor dependency that can be worked around if needed
+8,6,8,Need design assets from DevOps Automation team,2025-07-08,In Progress,Medium,Important dependency that affects multiple features in Security Compliance Initiative
+9,6,9,Blocked on integration testing with ML Recommendation Engine team,2025-04-28,In Progress,Low,Minor dependency that can be worked around if needed
+10,6,3,Need API specifications from Mobile App 2.0 team,2025-06-09,In Progress,High,Critical path item that will delay Security Compliance Initiative delivery if not completed on time
+11,2,9,Require technical documentation from ML Recommendation Engine team,2025-07-02,Not Started,Medium,Important dependency that affects multiple features in Customer Portal Redesign
+12,2,15,Waiting for security review from Performance Optimization team,2025-04-30,Completed,Medium,Important dependency that affects multiple features in Customer Portal Redesign
+13,14,12,Dependent on infrastructure changes from Enterprise CRM Integration team,2025-06-26,In Progress,Low,Minor dependency that can be worked around if needed
+14,14,6,Dependent on infrastructure changes from Security Compliance Initiative team,2025-05-16,In Progress,Medium,Important dependency that affects multiple features in Internal Knowledge Base
+15,14,2,Require technical documentation from Customer Portal Redesign team,2025-06-01,In Progress,High,Critical path item that will delay Internal Knowledge Base delivery if not completed on time
+16,11,14,Waiting for security review from Internal Knowledge Base team,2025-04-25,Not Started,Medium,Important dependency that affects multiple features in Horizon 2026 Strategic Planning
+17,11,6,Dependent on infrastructure changes from Security Compliance Initiative team,2025-06-16,Not Started,Low,Minor dependency that can be worked around if needed
+18,4,9,Blocked on integration testing with ML Recommendation Engine team,2025-04-19,Blocked,Medium,Important dependency that affects multiple features in Cloud Infrastructure Upgrade
+19,9,3,Waiting for component delivery from Mobile App 2.0 team,2025-05-24,Not Started,Medium,Important dependency that affects multiple features in ML Recommendation Engine
+20,9,12,Need API specifications from Enterprise CRM Integration team,2025-06-05,In Progress,Medium,Important dependency that affects multiple features in ML Recommendation Engine
+21,9,5,Need API specifications from Data Analytics Platform team,2025-06-08,In Progress,Medium,Important dependency that affects multiple features in ML Recommendation Engine
+22,12,7,Waiting for security review from API Gateway Implementation team,2025-04-30,Completed,High,Critical path item that will delay Enterprise CRM Integration delivery if not completed on time

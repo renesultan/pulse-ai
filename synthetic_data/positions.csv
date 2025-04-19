@@ -1,0 +1,78 @@
+position_id,title,department_id,level,salary_band_minimum,salary_band_maximum
+1,CEO,,C-Suite,250000,500000
+2,CTO,,C-Suite,250000,500000
+3,CFO,,C-Suite,250000,500000
+4,COO,,C-Suite,250000,500000
+5,CHRO,,C-Suite,250000,500000
+6,CMO,,C-Suite,250000,500000
+7,VP of Engineering,1.0,VP,180000,300000
+8,Director of Engineering,1.0,Director,130000,200000
+9,Engineering Manager,1.0,Manager,90000,140000
+10,Engineering Team Lead,1.0,Team Lead,80000,120000
+11,Senior Engineering Specialist,1.0,Senior,70000,110000
+12,Mid-level Engineering Specialist,1.0,Mid-level,55000,85000
+13,Junior Engineering Specialist,1.0,Junior,40000,65000
+14,VP of Product Management,2.0,VP,180000,300000
+15,Director of Product Management,2.0,Director,130000,200000
+16,Product Management Manager,2.0,Manager,90000,140000
+17,Product Management Team Lead,2.0,Team Lead,80000,120000
+18,Senior Product Management Specialist,2.0,Senior,70000,110000
+19,Mid-level Product Management Specialist,2.0,Mid-level,55000,85000
+20,Junior Product Management Specialist,2.0,Junior,40000,65000
+21,VP of Sales & Marketing,3.0,VP,180000,300000
+22,Director of Sales & Marketing,3.0,Director,130000,200000
+23,Sales & Marketing Manager,3.0,Manager,90000,140000
+24,Sales & Marketing Team Lead,3.0,Team Lead,80000,120000
+25,Senior Sales & Marketing Specialist,3.0,Senior,70000,110000
+26,Mid-level Sales & Marketing Specialist,3.0,Mid-level,55000,85000
+27,Junior Sales & Marketing Specialist,3.0,Junior,40000,65000
+28,VP of Customer Success,4.0,VP,180000,300000
+29,Director of Customer Success,4.0,Director,130000,200000
+30,Customer Success Manager,4.0,Manager,90000,140000
+31,Customer Success Team Lead,4.0,Team Lead,80000,120000
+32,Senior Customer Success Specialist,4.0,Senior,70000,110000
+33,Mid-level Customer Success Specialist,4.0,Mid-level,55000,85000
+34,Junior Customer Success Specialist,4.0,Junior,40000,65000
+35,VP of Finance & Accounting,5.0,VP,180000,300000
+36,Director of Finance & Accounting,5.0,Director,130000,200000
+37,Finance & Accounting Manager,5.0,Manager,90000,140000
+38,Finance & Accounting Team Lead,5.0,Team Lead,80000,120000
+39,Senior Finance & Accounting Specialist,5.0,Senior,70000,110000
+40,Mid-level Finance & Accounting Specialist,5.0,Mid-level,55000,85000
+41,Junior Finance & Accounting Specialist,5.0,Junior,40000,65000
+42,VP of Human Resources,6.0,VP,180000,300000
+43,Director of Human Resources,6.0,Director,130000,200000
+44,Human Resources Manager,6.0,Manager,90000,140000
+45,Human Resources Team Lead,6.0,Team Lead,80000,120000
+46,Senior Human Resources Specialist,6.0,Senior,70000,110000
+47,Mid-level Human Resources Specialist,6.0,Mid-level,55000,85000
+48,Junior Human Resources Specialist,6.0,Junior,40000,65000
+49,VP of Operations,7.0,VP,180000,300000
+50,Director of Operations,7.0,Director,130000,200000
+51,Operations Manager,7.0,Manager,90000,140000
+52,Operations Team Lead,7.0,Team Lead,80000,120000
+53,Senior Operations Specialist,7.0,Senior,70000,110000
+54,Mid-level Operations Specialist,7.0,Mid-level,55000,85000
+55,Junior Operations Specialist,7.0,Junior,40000,65000
+56,VP of Research & Development,8.0,VP,180000,300000
+57,Director of Research & Development,8.0,Director,130000,200000
+58,Research & Development Manager,8.0,Manager,90000,140000
+59,Research & Development Team Lead,8.0,Team Lead,80000,120000
+60,Senior Research & Development Specialist,8.0,Senior,70000,110000
+61,Mid-level Research & Development Specialist,8.0,Mid-level,55000,85000
+62,Junior Research & Development Specialist,8.0,Junior,40000,65000
+63,Senior Software Engineer,1.0,Senior,70000,110000
+64,Mid-level Software Engineer,1.0,Mid-level,55000,85000
+65,Junior Software Engineer,1.0,Junior,40000,65000
+66,Senior QA Engineer,1.0,Senior,70000,110000
+67,Mid-level QA Engineer,1.0,Mid-level,55000,85000
+68,Junior QA Engineer,1.0,Junior,40000,65000
+69,Senior DevOps Engineer,1.0,Senior,70000,110000
+70,Mid-level DevOps Engineer,1.0,Mid-level,55000,85000
+71,Junior DevOps Engineer,1.0,Junior,40000,65000
+72,Senior Frontend Developer,1.0,Senior,70000,110000
+73,Mid-level Frontend Developer,1.0,Mid-level,55000,85000
+74,Junior Frontend Developer,1.0,Junior,40000,65000
+75,Senior Backend Developer,1.0,Senior,70000,110000
+76,Mid-level Backend Developer,1.0,Mid-level,55000,85000
+77,Junior Backend Developer,1.0,Junior,40000,65000

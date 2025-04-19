@@ -1,0 +1,46 @@
+team_objective_id,team_id,objective_statement,department_objective_id,timeframe,owner_id,status,priority
+1,1,Deliver Atlas Platform Migration components that support develop go-to-market strategy for expand into european market,8.0,Q4 2025,251,Behind,Medium
+2,1,Deliver Atlas Platform Migration components that support develop go-to-market strategy for build world-class engineering organization,10.0,FY 2025,251,At Risk,Low
+3,1,Implement Atlas Platform Migration features for develop go-to-market strategy for expand into european market,8.0,Q4 2025,251,Behind,Medium
+4,2,Complete Customer Portal Redesign milestones aligned with develop go-to-market strategy for build world-class engineering organization,10.0,FY 2025,237,On Track,Low
+5,2,Complete Customer Portal Redesign milestones aligned with develop go-to-market strategy for expand into european market,8.0,Q4 2025,237,At Risk,Medium
+6,2,Complete Customer Portal Redesign milestones aligned with generate qualified leads to achieve achieve market leadership in cloud-based enterprise solutions,9.0,FY 2025,237,On Track,Medium
+7,2,Implement Customer Portal Redesign features for develop go-to-market strategy for expand into european market,11.0,Q4 2025,237,At Risk,Medium
+8,3,Complete Mobile App 2.0 milestones aligned with develop go-to-market strategy for expand into european market,8.0,Q4 2025,267,On Track,Medium
+9,3,Deliver Mobile App 2.0 components that support develop go-to-market strategy for expand into european market,11.0,Q4 2025,267,On Track,Medium
+10,3,Complete Mobile App 2.0 milestones aligned with generate qualified leads to achieve achieve market leadership in cloud-based enterprise solutions,9.0,FY 2025,267,On Track,Medium
+11,3,Improve Mobile App 2.0 performance metrics,,Q4 2025,267,At Risk,Medium
+12,4,Complete Cloud Infrastructure Upgrade milestones aligned with develop financial models for achieve soc 2 type ii compliance,18.0,Q2 2025,387,On Track,Medium
+13,4,Implement Cloud Infrastructure Upgrade features for ensure funding for initiatives related to increase annual recurring revenue by 30%,15.0,FY 2025,387,On Track,High
+14,5,Implement Data Analytics Platform features for generate qualified leads to achieve achieve market leadership in cloud-based enterprise solutions,9.0,FY 2025,267,On Track,Medium
+15,5,Implement Data Analytics Platform features for generate qualified leads to achieve achieve market leadership in cloud-based enterprise solutions,9.0,FY 2025,267,On Track,Medium
+16,5,Complete Data Analytics Platform milestones aligned with develop go-to-market strategy for expand into european market,11.0,Q4 2025,267,At Risk,Medium
+17,6,Implement Security Compliance Initiative features for streamline processes to enable expand into european market,23.0,Q4 2025,431,At Risk,Medium
+18,6,Deliver Security Compliance Initiative components that support implement operational improvements for build world-class engineering organization,24.0,FY 2025,431,At Risk,High
+19,6,Complete Security Compliance Initiative milestones aligned with streamline processes to enable expand into european market,23.0,Q4 2025,431,At Risk,Medium
+20,7,Deliver API Gateway Implementation components that support improve customer experience to enable launch next-generation platform with ai capabilities,12.0,Q3 2025,311,At Risk,High
+21,7,Deliver API Gateway Implementation components that support create customer feedback program,14.0,Q3 2025,311,At Risk,Low
+22,7,Improve API Gateway Implementation performance metrics,,FY 2025,311,On Track,High
+23,8,Implement DevOps Automation features for deliver technical capabilities for build world-class engineering organization,4.0,FY 2025,73,Behind,Medium
+24,8,Implement DevOps Automation features for build infrastructure to support achieve market leadership in cloud-based enterprise solutions,3.0,FY 2025,73,On Track,Medium
+25,9,Complete ML Recommendation Engine milestones aligned with improve customer experience to enable launch next-generation platform with ai capabilities,13.0,Q3 2025,311,Behind,Medium
+26,9,Deliver ML Recommendation Engine components that support create customer feedback program,14.0,Q3 2025,311,Behind,Low
+27,9,Complete ML Recommendation Engine milestones aligned with create customer feedback program,14.0,Q3 2025,311,Behind,Low
+28,10,Complete Customer Retention Program milestones aligned with ensure funding for initiatives related to improve customer satisfaction and reduce churn,16.0,Q2 2025,387,On Track,Medium
+29,10,Deliver Customer Retention Program components that support ensure funding for initiatives related to achieve soc 2 type ii compliance,17.0,Q2 2025,387,On Track,Low
+30,10,Implement Customer Retention Program features for ensure funding for initiatives related to improve customer satisfaction and reduce churn,16.0,Q2 2025,387,On Track,Medium
+31,10,Improve Customer Retention Program performance metrics,,FY 2025,387,On Track,Medium
+32,11,Implement Horizon 2026 Strategic Planning features for generate qualified leads to achieve achieve market leadership in cloud-based enterprise solutions,9.0,FY 2025,261,On Track,Medium
+33,11,Deliver Horizon 2026 Strategic Planning components that support develop go-to-market strategy for build world-class engineering organization,10.0,FY 2025,261,On Track,Low
+34,11,Implement Horizon 2026 Strategic Planning features for develop go-to-market strategy for expand into european market,11.0,Q4 2025,261,On Track,Medium
+35,12,Deliver Enterprise CRM Integration components that support define product roadmap to achieve increase annual recurring revenue by 30%,6.0,FY 2025,185,On Track,High
+36,12,Implement Enterprise CRM Integration features for define product roadmap to achieve increase annual recurring revenue by 30%,6.0,FY 2025,185,On Track,High
+37,12,Complete Enterprise CRM Integration milestones aligned with define product roadmap to achieve increase annual recurring revenue by 30%,6.0,FY 2025,185,At Risk,High
+38,13,Complete Marketplace Expansion milestones aligned with develop go-to-market strategy for expand into european market,11.0,Q4 2025,246,On Track,Medium
+39,13,Deliver Marketplace Expansion components that support develop go-to-market strategy for expand into european market,8.0,Q4 2025,246,At Risk,Medium
+40,13,Deliver Marketplace Expansion components that support develop go-to-market strategy for build world-class engineering organization,10.0,FY 2025,246,On Track,Low
+41,14,Implement Internal Knowledge Base features for develop training programs to support launch next-generation platform with ai capabilities,22.0,Q3 2025,416,At Risk,Low
+42,14,Complete Internal Knowledge Base milestones aligned with recruit talent needed to achieve build world-class engineering organization,19.0,FY 2025,416,At Risk,High
+43,15,Implement Performance Optimization features for develop technical solutions for build world-class engineering organization,1.0,FY 2025,93,On Track,High
+44,15,Complete Performance Optimization milestones aligned with build infrastructure to support expand into european market,2.0,Q4 2025,93,On Track,Medium
+45,15,Complete Performance Optimization milestones aligned with build infrastructure to support expand into european market,2.0,Q4 2025,93,Behind,Medium

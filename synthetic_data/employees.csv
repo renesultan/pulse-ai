@@ -1,0 +1,522 @@
+employee_id,first_name,last_name,email,hire_date,job_title,department_id,manager_id,employment_status,location,salary
+1,Danielle,Johnson,danielle.johnson@horizontech.com,2017-09-02,CEO,,,Active,"San Francisco, CA",395696
+2,Joshua,Walker,joshua.walker@horizontech.com,2015-06-26,CTO,,1.0,Active,"San Francisco, CA",369238
+3,Jill,Rhodes,jill.rhodes@horizontech.com,2015-06-22,CFO,,1.0,Active,"San Francisco, CA",401987
+4,Patricia,Miller,patricia.miller@horizontech.com,2015-10-30,COO,,1.0,Active,"San Francisco, CA",438459
+5,Robert,Johnson,robert.johnson@horizontech.com,2016-07-12,CHRO,,1.0,Active,"San Francisco, CA",365243
+6,Jeffery,Wagner,jeffery.wagner@horizontech.com,2016-08-10,CMO,,1.0,Active,"San Francisco, CA",365244
+7,Anthony,Gonzalez,anthony.gonzalez@horizontech.com,2020-02-19,VP of Engineering,1.0,1.0,Active,"Austin, TX",271584
+8,Debra,Gardner,debra.gardner@horizontech.com,2020-09-04,VP of Product Management,2.0,1.0,Active,"San Francisco, CA",255348
+9,Jeffrey,Lawrence,jeffrey.lawrence@horizontech.com,2017-06-14,VP of Sales & Marketing,3.0,1.0,Active,"San Francisco, CA",230610
+10,Lisa,Smith,lisa.smith@horizontech.com,2020-06-13,VP of Customer Success,4.0,1.0,Active,"San Francisco, CA",250851
+11,Linda,Wolfe,linda.wolfe@horizontech.com,2018-06-02,VP of Finance & Accounting,5.0,1.0,Active,Remote,230731
+12,Matthew,Moore,matthew.moore@horizontech.com,2021-04-26,VP of Human Resources,6.0,1.0,Active,Remote,230685
+13,Susan,Rogers,susan.rogers@horizontech.com,2020-12-11,VP of Operations,7.0,1.0,Active,"Boston, MA",244839
+14,Christopher,Davis,christopher.davis@horizontech.com,2021-03-27,VP of Research & Development,8.0,1.0,Active,"San Francisco, CA",201734
+15,Melanie,Munoz,melanie.munoz@horizontech.com,2023-01-03,Mid-level Frontend Developer,1.0,7.0,Active,"Austin, TX",61375
+16,Lindsay,Blair,lindsay.blair@horizontech.com,2020-02-03,VP of Engineering,1.0,7.0,Active,"Austin, TX",228754
+17,Amanda,Dudley,amanda.dudley@horizontech.com,2020-09-18,Senior Engineering Specialist,1.0,7.0,Leave,"Austin, TX",83247
+18,Nicholas,Arnold,nicholas.arnold@horizontech.com,2022-07-25,Engineering Manager,1.0,7.0,Active,"Austin, TX",117618
+19,Maria,Montgomery,maria.montgomery@horizontech.com,2021-04-08,Senior Backend Developer,1.0,18.0,Active,"San Francisco, CA",83946
+20,Michelle,Ray,michelle.ray@horizontech.com,2019-09-14,Mid-level Frontend Developer,1.0,18.0,Leave,"Austin, TX",62938
+21,Janet,Williams,janet.williams@horizontech.com,2021-08-03,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",77328
+22,Jeremy,Roberts,jeremy.roberts@horizontech.com,2024-10-10,Mid-level QA Engineer,1.0,18.0,Active,"Austin, TX",68871
+23,Christopher,Hall,christopher.hall@horizontech.com,2020-11-09,Junior Backend Developer,1.0,18.0,Active,"Seattle, WA",52781
+24,Craig,Ramirez,craig.ramirez@horizontech.com,2019-06-08,Senior Software Engineer,1.0,18.0,Active,"Austin, TX",80501
+25,Cynthia,Diaz,cynthia.diaz@horizontech.com,2020-02-16,Mid-level QA Engineer,1.0,18.0,Active,"Austin, TX",67278
+26,Mitchell,Clark,mitchell.clark@horizontech.com,2019-02-07,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",70554
+27,Joseph,Zuniga,joseph.zuniga@horizontech.com,2020-02-19,Senior Software Engineer,1.0,18.0,Active,"Austin, TX",82326
+28,Deborah,Lynch,deborah.lynch@horizontech.com,2024-07-19,Mid-level Backend Developer,1.0,18.0,Active,"Austin, TX",71878
+29,George,Daniel,george.daniel@horizontech.com,2020-11-14,Director of Engineering,1.0,7.0,Active,"Austin, TX",157992
+30,Frank,Gray,frank.gray@horizontech.com,2021-04-21,Junior QA Engineer,1.0,18.0,Active,"Boston, MA",51284
+31,Veronica,Bowman,veronica.bowman@horizontech.com,2021-10-30,Junior Frontend Developer,1.0,18.0,Active,"Austin, TX",49992
+32,Angela,Cohen,angela.cohen@horizontech.com,2023-06-13,Mid-level Backend Developer,1.0,18.0,Active,"Austin, TX",79261
+33,Megan,Parsons,megan.parsons@horizontech.com,2024-05-06,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",69932
+34,Jeremy,Johnson,jeremy.johnson@horizontech.com,2022-10-12,Junior Frontend Developer,1.0,18.0,Active,"Seattle, WA",48092
+35,Leslie,Adams,leslie.adams@horizontech.com,2024-01-07,Senior Engineering Specialist,1.0,18.0,Active,"New York, NY",95483
+36,Jason,Hahn,jason.hahn@horizontech.com,2020-01-07,Engineering Team Lead,1.0,18.0,Active,"New York, NY",91861
+37,Nancy,Edwards,nancy.edwards@horizontech.com,2024-12-27,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",91392
+38,Diana,Foster,diana.foster@horizontech.com,2024-03-27,Mid-level DevOps Engineer,1.0,18.0,Active,"Austin, TX",60201
+39,Robin,Ellis,robin.ellis@horizontech.com,2019-08-03,VP of Engineering,1.0,18.0,Active,"Austin, TX",213436
+40,Joseph,Wright,joseph.wright@horizontech.com,2022-02-12,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",70984
+41,Anna,Baker,anna.baker@horizontech.com,2018-05-04,Mid-level DevOps Engineer,1.0,18.0,Leave,Remote,73692
+42,Brenda,Hurst,brenda.hurst@horizontech.com,2023-12-01,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",70856
+43,Reginald,Robinson,reginald.robinson@horizontech.com,2021-08-25,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",99229
+44,Whitney,Hicks,whitney.hicks@horizontech.com,2020-01-07,Junior Engineering Specialist,1.0,18.0,Active,"Austin, TX",51245
+45,Christopher,Williams,christopher.williams@horizontech.com,2018-04-23,Senior Frontend Developer,1.0,18.0,Active,"Austin, TX",80143
+46,Daniel,Burton,daniel.burton@horizontech.com,2022-05-16,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",95201
+47,Laura,Henderson,laura.henderson@horizontech.com,2020-12-26,Junior Software Engineer,1.0,18.0,Active,Remote,50580
+48,Bryan,James,bryan.james@horizontech.com,2019-04-06,Engineering Manager,1.0,29.0,Active,"Austin, TX",123809
+49,Wendy,Rice,wendy.rice@horizontech.com,2019-09-18,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",71718
+50,Tasha,Valencia,tasha.valencia@horizontech.com,2020-02-26,Mid-level Frontend Developer,1.0,18.0,Active,Remote,61184
+51,Alexander,Le,alexander.le@horizontech.com,2020-09-04,Senior DevOps Engineer,1.0,18.0,Active,"New York, NY",92160
+52,Erin,Herrera,erin.herrera@horizontech.com,2021-10-18,Junior Engineering Specialist,1.0,18.0,Active,"Austin, TX",50895
+53,Joseph,Davidson,joseph.davidson@horizontech.com,2023-03-20,Mid-level QA Engineer,1.0,18.0,Active,"Austin, TX",66615
+54,Daniel,Graham,daniel.graham@horizontech.com,2020-10-27,Senior Software Engineer,1.0,18.0,Active,"Austin, TX",94077
+55,Shawn,Mckay,shawn.mckay@horizontech.com,2020-11-18,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",75154
+56,Nancy,Baker,nancy.baker@horizontech.com,2018-12-18,Mid-level Backend Developer,1.0,18.0,Active,"Boston, MA",74656
+57,Vincent,White,vincent.white@horizontech.com,2019-02-05,Senior QA Engineer,1.0,18.0,Active,"Austin, TX",84405
+58,Rita,Harrell,rita.harrell@horizontech.com,2020-09-14,Junior DevOps Engineer,1.0,18.0,Active,"San Francisco, CA",51211
+59,Kenneth,Fowler,kenneth.fowler@horizontech.com,2024-10-06,Junior Frontend Developer,1.0,18.0,Active,"New York, NY",53880
+60,Chelsea,Hernandez,chelsea.hernandez@horizontech.com,2020-06-08,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",96503
+61,Kathryn,Ryan,kathryn.ryan@horizontech.com,2023-01-19,Mid-level QA Engineer,1.0,18.0,Active,Remote,67604
+62,Kimberly,Moreno,kimberly.moreno@horizontech.com,2019-05-29,Director of Engineering,1.0,7.0,Active,"San Francisco, CA",162833
+63,Aaron,Nguyen,aaron.nguyen@horizontech.com,2021-02-02,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",92624
+64,Andrew,Hickman,andrew.hickman@horizontech.com,2023-01-13,Senior Engineering Specialist,1.0,18.0,Active,"Austin, TX",82025
+65,Natasha,Decker,natasha.decker@horizontech.com,2023-04-10,Engineering Manager,1.0,29.0,Active,Remote,121771
+66,Kyle,Brown,kyle.brown@horizontech.com,2018-11-14,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",109041
+67,Natalie,Arroyo,natalie.arroyo@horizontech.com,2019-05-08,VP of Engineering,1.0,18.0,Active,"Austin, TX",238559
+68,Christopher,Tucker,christopher.tucker@horizontech.com,2022-11-10,Mid-level Engineering Specialist,1.0,18.0,Active,"Austin, TX",75017
+69,Chad,Hodges,chad.hodges@horizontech.com,2018-12-17,Junior QA Engineer,1.0,18.0,Active,"Austin, TX",54006
+70,Katie,Anderson,katie.anderson@horizontech.com,2021-04-11,Junior QA Engineer,1.0,18.0,Active,"New York, NY",49812
+71,Thomas,Pierce,thomas.pierce@horizontech.com,2023-01-17,Junior Software Engineer,1.0,18.0,Active,"San Francisco, CA",54005
+72,Joseph,Brennan,joseph.brennan@horizontech.com,2023-10-05,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",77690
+73,Rodney,Lewis,rodney.lewis@horizontech.com,2024-10-18,Director of Engineering,1.0,7.0,Active,"Austin, TX",164582
+74,Amber,Blair,amber.blair@horizontech.com,2018-12-11,Senior QA Engineer,1.0,18.0,Active,"Austin, TX",100430
+75,James,Collins,james.collins@horizontech.com,2020-01-25,Senior Frontend Developer,1.0,18.0,Active,"Austin, TX",72535
+76,Wanda,Santos,wanda.santos@horizontech.com,2019-01-26,Mid-level Engineering Specialist,1.0,18.0,Active,"Austin, TX",74109
+77,Samuel,Holmes,samuel.holmes@horizontech.com,2022-10-30,Senior Software Engineer,1.0,18.0,Active,Remote,90580
+78,David,Walker,david.walker@horizontech.com,2024-10-17,Senior Software Engineer,1.0,18.0,Active,"Austin, TX",88006
+79,Matthew,Chapman,matthew.chapman@horizontech.com,2024-11-05,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",90611
+80,Jerry,Robinson,jerry.robinson@horizontech.com,2020-08-04,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",60062
+81,Chad,Welch,chad.welch@horizontech.com,2022-09-28,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",68901
+82,Jeremy,Whitehead,jeremy.whitehead@horizontech.com,2021-11-06,Mid-level DevOps Engineer,1.0,18.0,Active,"Boston, MA",71785
+83,Michele,Jones,michele.jones@horizontech.com,2023-06-11,VP of Engineering,1.0,18.0,Active,"Austin, TX",269557
+84,John,Caldwell,john.caldwell@horizontech.com,2019-02-15,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",96544
+85,Jason,Anderson,jason.anderson@horizontech.com,2022-03-20,Senior Engineering Specialist,1.0,18.0,Active,Remote,84610
+86,Selena,Duncan,selena.duncan@horizontech.com,2021-07-01,Mid-level QA Engineer,1.0,18.0,Active,"Austin, TX",67491
+87,Thomas,Mueller,thomas.mueller@horizontech.com,2025-02-28,Junior Software Engineer,1.0,18.0,Leave,"Austin, TX",56314
+88,Lindsey,Lee,lindsey.lee@horizontech.com,2018-05-23,Senior Frontend Developer,1.0,18.0,Active,"Austin, TX",92191
+89,Collin,Jordan,collin.jordan@horizontech.com,2019-06-19,Junior Backend Developer,1.0,18.0,Active,"Austin, TX",50292
+90,Rodney,Owens,rodney.owens@horizontech.com,2019-07-03,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",103421
+91,Jessica,Nunez,jessica.nunez@horizontech.com,2025-01-31,Junior Software Engineer,1.0,18.0,Active,"Austin, TX",52904
+92,Tracey,Garcia,tracey.garcia@horizontech.com,2021-04-06,Junior Backend Developer,1.0,18.0,Active,"Austin, TX",56536
+93,Richard,Morgan,richard.morgan@horizontech.com,2019-05-04,Director of Engineering,1.0,7.0,Active,"Austin, TX",156809
+94,Michelle,Wright,michelle.wright@horizontech.com,2018-05-05,Director of Engineering,1.0,7.0,Active,"Austin, TX",161177
+95,James,West,james.west@horizontech.com,2020-02-11,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",68039
+96,Robert,Ramirez,robert.ramirez@horizontech.com,2024-08-04,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",80243
+97,John,Leblanc,john.leblanc@horizontech.com,2024-06-02,Senior Engineering Specialist,1.0,18.0,Active,"Austin, TX",91974
+98,Scott,Callahan,scott.callahan@horizontech.com,2019-12-18,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",71305
+99,Andrea,Williams,andrea.williams@horizontech.com,2018-10-01,Mid-level QA Engineer,1.0,18.0,Active,"Austin, TX",70025
+100,Yvette,Huff,yvette.huff@horizontech.com,2019-06-16,Senior Software Engineer,1.0,18.0,Active,"Austin, TX",88436
+101,Tanya,House,tanya.house@horizontech.com,2025-04-06,Senior DevOps Engineer,1.0,18.0,Active,"Boston, MA",80564
+102,Melinda,Martin,melinda.martin@horizontech.com,2020-02-15,Senior Software Engineer,1.0,18.0,Leave,"Austin, TX",87195
+103,Todd,Lewis,todd.lewis@horizontech.com,2018-07-31,Senior DevOps Engineer,1.0,18.0,Active,"Boston, MA",87715
+104,Richard,Brown,richard.brown@horizontech.com,2021-01-31,Senior DevOps Engineer,1.0,18.0,Active,"New York, NY",84651
+105,Nicholas,Galloway,nicholas.galloway@horizontech.com,2022-08-04,Engineering Team Lead,1.0,18.0,Active,Remote,98924
+106,Joseph,Bowers,joseph.bowers@horizontech.com,2020-07-16,Senior Software Engineer,1.0,18.0,Active,"Austin, TX",92693
+107,Spencer,Henderson,spencer.henderson@horizontech.com,2020-11-08,Junior Software Engineer,1.0,18.0,Active,"Austin, TX",60359
+108,Susan,Cowan,susan.cowan@horizontech.com,2021-12-25,Junior QA Engineer,1.0,18.0,Active,"Austin, TX",53227
+109,Angela,Higgins,angela.higgins@horizontech.com,2022-03-29,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",71287
+110,Eric,Phillips,eric.phillips@horizontech.com,2022-01-06,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",69627
+111,Tanya,Riley,tanya.riley@horizontech.com,2020-04-21,Mid-level Software Engineer,1.0,18.0,Active,"Seattle, WA",60406
+112,Amy,Adkins,amy.adkins@horizontech.com,2019-07-09,Director of Engineering,1.0,7.0,Active,"Austin, TX",164690
+113,Brian,Silva,brian.silva@horizontech.com,2023-03-13,Senior QA Engineer,1.0,18.0,Active,"Austin, TX",90401
+114,Wesley,Farrell,wesley.farrell@horizontech.com,2024-10-07,Junior QA Engineer,1.0,18.0,Active,"Austin, TX",62763
+115,Eric,Yu,eric.yu@horizontech.com,2018-04-27,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",88717
+116,Christopher,Lopez,christopher.lopez@horizontech.com,2020-07-06,Junior Backend Developer,1.0,18.0,Active,"Austin, TX",53756
+117,Brooke,Leonard,brooke.leonard@horizontech.com,2022-01-02,Junior Backend Developer,1.0,18.0,Active,"Austin, TX",52355
+118,Joe,Wilson,joe.wilson@horizontech.com,2021-09-02,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",92208
+119,Pamela,Sanchez,pamela.sanchez@horizontech.com,2022-10-25,Senior QA Engineer,1.0,18.0,Active,"Austin, TX",97618
+120,Brooke,Harvey,brooke.harvey@horizontech.com,2023-01-07,Junior Engineering Specialist,1.0,18.0,Active,"Austin, TX",55633
+121,Robert,Silva,robert.silva@horizontech.com,2025-03-16,Mid-level Engineering Specialist,1.0,18.0,Active,"Austin, TX",73955
+122,Alexandra,Donovan,alexandra.donovan@horizontech.com,2021-09-16,VP of Engineering,1.0,18.0,Active,"Austin, TX",221812
+123,James,Moran,james.moran@horizontech.com,2025-02-07,Junior Frontend Developer,1.0,18.0,Active,"Austin, TX",58344
+124,John,Foster,john.foster@horizontech.com,2020-09-12,Mid-level DevOps Engineer,1.0,18.0,Active,"New York, NY",62990
+125,Emily,Evans,emily.evans@horizontech.com,2019-04-03,Mid-level Engineering Specialist,1.0,18.0,Active,"Austin, TX",72934
+126,Leslie,Walton,leslie.walton@horizontech.com,2022-01-22,Senior Backend Developer,1.0,18.0,Active,"Seattle, WA",104603
+127,Charles,Ellis,charles.ellis@horizontech.com,2021-10-13,Senior Software Engineer,1.0,18.0,Active,"Austin, TX",83396
+128,Yolanda,Ferrell,yolanda.ferrell@horizontech.com,2018-10-27,VP of Engineering,1.0,18.0,Active,"Austin, TX",228674
+129,Charles,Lewis,charles.lewis@horizontech.com,2023-05-30,Engineering Manager,1.0,29.0,Active,"Austin, TX",115830
+130,Joseph,Mahoney,joseph.mahoney@horizontech.com,2022-08-10,Junior Engineering Specialist,1.0,18.0,Active,"Austin, TX",50402
+131,Nicole,Suarez,nicole.suarez@horizontech.com,2018-05-13,Mid-level Backend Developer,1.0,18.0,Active,Remote,62246
+132,Mike,Moore,mike.moore@horizontech.com,2023-01-26,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",100457
+133,Martha,Warner,martha.warner@horizontech.com,2023-07-06,Senior Frontend Developer,1.0,18.0,Active,"Austin, TX",82917
+134,Cheryl,Archer,cheryl.archer@horizontech.com,2023-06-03,Engineering Team Lead,1.0,18.0,Active,"Austin, TX",103157
+135,Destiny,Smith,destiny.smith@horizontech.com,2024-07-27,Senior Frontend Developer,1.0,18.0,Active,"Seattle, WA",83870
+136,Lisa,Evans,lisa.evans@horizontech.com,2025-03-04,Mid-level DevOps Engineer,1.0,18.0,Active,Remote,77749
+137,Elizabeth,Mcmillan,elizabeth.mcmillan@horizontech.com,2024-06-12,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",84778
+138,Dennis,Wilson,dennis.wilson@horizontech.com,2023-05-08,Junior DevOps Engineer,1.0,18.0,Active,"Austin, TX",51158
+139,Daniel,Tran,daniel.tran@horizontech.com,2021-05-30,Mid-level Backend Developer,1.0,18.0,Active,"Austin, TX",74067
+140,Joseph,Jacobs,joseph.jacobs@horizontech.com,2020-12-25,Mid-level Backend Developer,1.0,18.0,Active,"Austin, TX",63845
+141,Jennifer,Harris,jennifer.harris@horizontech.com,2020-12-06,Junior Software Engineer,1.0,18.0,Active,"Austin, TX",53447
+142,Cynthia,Baker,cynthia.baker@horizontech.com,2019-03-17,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",76535
+143,Tracy,Whitehead,tracy.whitehead@horizontech.com,2020-09-13,Senior Engineering Specialist,1.0,18.0,Active,"Austin, TX",79283
+144,Meghan,Davis,meghan.davis@horizontech.com,2023-07-12,Mid-level Frontend Developer,1.0,18.0,Active,"Austin, TX",70923
+145,Rodney,Hill,rodney.hill@horizontech.com,2022-09-02,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",91732
+146,Adam,Wise,adam.wise@horizontech.com,2024-10-04,VP of Engineering,1.0,18.0,Active,"Austin, TX",255636
+147,Dana,Green,dana.green@horizontech.com,2021-08-26,Mid-level QA Engineer,1.0,18.0,Active,Remote,63815
+148,Joyce,Arnold,joyce.arnold@horizontech.com,2024-05-03,Senior DevOps Engineer,1.0,18.0,Active,"Austin, TX",81196
+149,Ronald,Smith,ronald.smith@horizontech.com,2020-10-10,Senior Backend Developer,1.0,18.0,Active,"Austin, TX",93479
+150,Charles,Ware,charles.ware@horizontech.com,2018-08-17,Junior DevOps Engineer,1.0,18.0,Active,"Austin, TX",53737
+151,Rebecca,Gardner,rebecca.gardner@horizontech.com,2020-02-26,Junior QA Engineer,1.0,18.0,Active,"Boston, MA",53543
+152,Mary,Aguilar,mary.aguilar@horizontech.com,2024-04-16,Senior Backend Developer,1.0,18.0,Active,"Austin, TX",92309
+153,Earl,Anderson,earl.anderson@horizontech.com,2018-08-10,Junior Frontend Developer,1.0,18.0,Active,"Austin, TX",49666
+154,Kyle,Nolan,kyle.nolan@horizontech.com,2020-05-04,Mid-level DevOps Engineer,1.0,18.0,Active,"Austin, TX",71161
+155,Laura,Valencia,laura.valencia@horizontech.com,2023-05-27,Junior Engineering Specialist,1.0,18.0,Active,"New York, NY",53721
+156,Rachel,Clark,rachel.clark@horizontech.com,2021-06-03,Junior QA Engineer,1.0,18.0,Active,"Austin, TX",49523
+157,John,Garcia,john.garcia@horizontech.com,2019-03-22,Mid-level Software Engineer,1.0,18.0,Active,"San Francisco, CA",79328
+158,Kimberly,Henson,kimberly.henson@horizontech.com,2022-03-24,Director of Engineering,1.0,7.0,Active,"Austin, TX",170528
+159,Richard,Oliver,richard.oliver@horizontech.com,2018-10-02,Mid-level Backend Developer,1.0,18.0,Active,"Boston, MA",64043
+160,Eric,Spears,eric.spears@horizontech.com,2018-07-13,Junior Engineering Specialist,1.0,18.0,Active,"Austin, TX",55235
+161,Michelle,Cherry,michelle.cherry@horizontech.com,2019-08-02,Junior DevOps Engineer,1.0,18.0,Active,"Austin, TX",48438
+162,Lisa,Keith,lisa.keith@horizontech.com,2022-06-09,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",73935
+163,Angel,Doyle,angel.doyle@horizontech.com,2020-02-20,Engineering Team Lead,1.0,18.0,Leave,"Austin, TX",107723
+164,Martin,Galvan,martin.galvan@horizontech.com,2021-10-19,VP of Engineering,1.0,18.0,Active,"Boston, MA",223586
+165,Leah,Shields,leah.shields@horizontech.com,2022-10-01,Junior QA Engineer,1.0,18.0,Active,"Austin, TX",56514
+166,Lisa,Adams,lisa.adams@horizontech.com,2021-01-09,Junior Frontend Developer,1.0,18.0,Active,"New York, NY",54219
+167,Kristin,Rodriguez,kristin.rodriguez@horizontech.com,2025-01-13,Junior Backend Developer,1.0,18.0,Active,"New York, NY",55925
+168,Monica,Garrison,monica.garrison@horizontech.com,2018-10-06,Junior Frontend Developer,1.0,18.0,Active,"Austin, TX",60403
+169,Jeffrey,Velasquez,jeffrey.velasquez@horizontech.com,2019-01-28,Mid-level QA Engineer,1.0,18.0,Active,"Austin, TX",68773
+170,Steven,Torres,steven.torres@horizontech.com,2023-10-19,Senior DevOps Engineer,1.0,18.0,Active,"Seattle, WA",84975
+171,Laura,Perez,laura.perez@horizontech.com,2023-06-17,Mid-level Backend Developer,1.0,18.0,Active,"Austin, TX",65552
+172,Andrew,Lee,andrew.lee@horizontech.com,2021-05-01,Senior Frontend Developer,1.0,18.0,Active,"Boston, MA",84561
+173,Mark,Lin,mark.lin@horizontech.com,2023-07-08,Junior DevOps Engineer,1.0,18.0,Active,"San Francisco, CA",52178
+174,Tammy,Ramirez,tammy.ramirez@horizontech.com,2021-12-01,Mid-level Software Engineer,1.0,18.0,Active,"Austin, TX",71705
+175,Darlene,Ross,darlene.ross@horizontech.com,2021-06-06,VP of Product Management,2.0,8.0,Active,"San Francisco, CA",245533
+176,Tina,Herrera,tina.herrera@horizontech.com,2024-09-10,Product Management Team Lead,2.0,8.0,Active,"San Francisco, CA",105514
+177,Sheila,Wilson,sheila.wilson@horizontech.com,2023-11-05,VP of Product Management,2.0,176.0,Active,"San Francisco, CA",240260
+178,Tara,White,tara.white@horizontech.com,2022-04-13,Director of Product Management,2.0,8.0,Active,"San Francisco, CA",181957
+179,Sydney,Baker,sydney.baker@horizontech.com,2021-05-26,Senior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",88235
+180,Daniel,Hamilton,daniel.hamilton@horizontech.com,2019-04-06,Director of Product Management,2.0,8.0,Active,"San Francisco, CA",196735
+181,Jessica,Edwards,jessica.edwards@horizontech.com,2020-12-30,Senior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",94171
+182,Catherine,Dixon,catherine.dixon@horizontech.com,2023-04-30,Product Management Team Lead,2.0,8.0,Active,"San Francisco, CA",94285
+183,Paul,Ray,paul.ray@horizontech.com,2022-11-02,Director of Product Management,2.0,8.0,Active,"San Francisco, CA",152506
+184,Jonathan,Fletcher,jonathan.fletcher@horizontech.com,2022-06-10,Senior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",93216
+185,Aaron,Frost,aaron.frost@horizontech.com,2024-06-22,Product Management Team Lead,2.0,8.0,Active,"San Francisco, CA",98510
+186,Amanda,Ball,amanda.ball@horizontech.com,2021-09-27,Product Management Manager,2.0,178.0,Active,"San Francisco, CA",120950
+187,Judy,Lambert,judy.lambert@horizontech.com,2021-11-03,Director of Product Management,2.0,8.0,Active,"San Francisco, CA",170521
+188,Michael,Jones,michael.jones@horizontech.com,2020-05-18,Junior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",52196
+189,Elizabeth,Rivera,elizabeth.rivera@horizontech.com,2024-11-29,Product Management Manager,2.0,178.0,Leave,"San Francisco, CA",107943
+190,Lee,Charles,lee.charles@horizontech.com,2019-06-06,Product Management Manager,2.0,178.0,Active,"San Francisco, CA",102376
+191,Jennifer,Evans,jennifer.evans@horizontech.com,2020-04-24,Product Management Manager,2.0,178.0,Active,"San Francisco, CA",111279
+192,Kyle,Ortiz,kyle.ortiz@horizontech.com,2021-05-18,Director of Product Management,2.0,8.0,Active,"San Francisco, CA",174991
+193,Richard,Phillips,richard.phillips@horizontech.com,2019-09-20,Product Management Manager,2.0,178.0,Active,"New York, NY",116784
+194,David,Fisher,david.fisher@horizontech.com,2018-06-10,VP of Product Management,2.0,176.0,Active,"San Francisco, CA",215085
+195,Shelby,Byrd,shelby.byrd@horizontech.com,2022-02-14,Product Management Team Lead,2.0,186.0,Active,"San Francisco, CA",101154
+196,Raven,Gilbert,raven.gilbert@horizontech.com,2023-08-29,Junior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",54105
+197,Kevin,Kelley,kevin.kelley@horizontech.com,2019-02-18,Product Management Team Lead,2.0,186.0,Active,"San Francisco, CA",94107
+198,Aaron,Mitchell,aaron.mitchell@horizontech.com,2019-12-23,Director of Product Management,2.0,8.0,Active,"Boston, MA",166793
+199,Russell,Carpenter,russell.carpenter@horizontech.com,2021-01-31,VP of Product Management,2.0,176.0,Active,"New York, NY",241164
+200,Diana,Marshall,diana.marshall@horizontech.com,2024-12-26,Senior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",82380
+201,Scott,Lewis,scott.lewis@horizontech.com,2022-07-27,Senior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",92385
+202,Thomas,Santana,thomas.santana@horizontech.com,2024-11-25,Junior Product Management Specialist,2.0,176.0,Terminated,"San Francisco, CA",54836
+203,Laura,Jackson,laura.jackson@horizontech.com,2018-12-23,Senior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",97220
+204,Christopher,Robertson,christopher.robertson@horizontech.com,2020-08-19,Junior Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",56890
+205,Cynthia,Rogers,cynthia.rogers@horizontech.com,2020-01-24,VP of Product Management,2.0,176.0,Active,"San Francisco, CA",212446
+206,Loretta,Potter,loretta.potter@horizontech.com,2018-05-01,Director of Product Management,2.0,8.0,Active,"San Francisco, CA",154058
+207,Emily,Walker,emily.walker@horizontech.com,2021-07-26,Product Management Team Lead,2.0,186.0,Active,"San Francisco, CA",103433
+208,James,Johnson,james.johnson@horizontech.com,2023-05-24,Product Management Manager,2.0,178.0,Active,"San Francisco, CA",119281
+209,John,Alvarez,john.alvarez@horizontech.com,2024-11-30,Product Management Manager,2.0,178.0,Active,"Boston, MA",119292
+210,Melissa,Jones,melissa.jones@horizontech.com,2019-08-04,Product Management Team Lead,2.0,186.0,Active,"San Francisco, CA",125684
+211,Robert,Soto,robert.soto@horizontech.com,2019-11-24,Product Management Manager,2.0,178.0,Active,"San Francisco, CA",119757
+212,James,Horton,james.horton@horizontech.com,2024-12-22,Product Management Manager,2.0,178.0,Active,"San Francisco, CA",124463
+213,Troy,Sanchez,troy.sanchez@horizontech.com,2023-03-24,Product Management Manager,2.0,178.0,Active,"San Francisco, CA",122950
+214,Diana,Smith,diana.smith@horizontech.com,2022-10-25,Mid-level Product Management Specialist,2.0,176.0,Active,"San Francisco, CA",73256
+215,Karen,Carrillo,karen.carrillo@horizontech.com,2023-03-19,Product Management Team Lead,2.0,186.0,Active,"San Francisco, CA",97898
+216,Daniel,Coleman,daniel.coleman@horizontech.com,2021-12-01,Product Management Team Lead,2.0,186.0,Active,"San Francisco, CA",105059
+217,Gregory,Rubio,gregory.rubio@horizontech.com,2024-10-02,Director of Product Management,2.0,8.0,Active,"San Francisco, CA",155983
+218,April,Williams,april.williams@horizontech.com,2021-04-28,Junior Sales & Marketing Specialist,3.0,9.0,Active,"New York, NY",51513
+219,John,Charles,john.charles@horizontech.com,2023-07-31,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",159337
+220,Stephen,Solis,stephen.solis@horizontech.com,2020-05-03,Sales & Marketing Manager,3.0,219.0,Terminated,"San Francisco, CA",115682
+221,Elizabeth,Travis,elizabeth.travis@horizontech.com,2023-10-26,Junior Sales & Marketing Specialist,3.0,220.0,Leave,"San Francisco, CA",62144
+222,Caitlin,Dodson,caitlin.dodson@horizontech.com,2022-01-15,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",87551
+223,Patricia,Salazar,patricia.salazar@horizontech.com,2021-12-31,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",173006
+224,Jennifer,Wagner,jennifer.wagner@horizontech.com,2022-10-17,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",61936
+225,Maria,Kelley,maria.kelley@horizontech.com,2019-04-16,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",96853
+226,Phyllis,Manning,phyllis.manning@horizontech.com,2022-11-01,Junior Sales & Marketing Specialist,3.0,220.0,Active,"Austin, TX",57037
+227,Thomas,Green,thomas.green@horizontech.com,2024-05-21,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",241285
+228,John,Walsh,john.walsh@horizontech.com,2022-05-11,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",82815
+229,Katie,Boyd,katie.boyd@horizontech.com,2018-11-18,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",95231
+230,Courtney,Hill,courtney.hill@horizontech.com,2023-03-20,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",120663
+231,Chris,Mitchell,chris.mitchell@horizontech.com,2025-02-16,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",225392
+232,Joseph,Flores,joseph.flores@horizontech.com,2024-06-24,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",116803
+233,Amber,Taylor,amber.taylor@horizontech.com,2019-07-29,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",165531
+234,Jesse,Benson,jesse.benson@horizontech.com,2020-01-11,Junior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",49784
+235,Jasmine,Brown,jasmine.brown@horizontech.com,2021-05-14,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",104292
+236,Rick,Daniels,rick.daniels@horizontech.com,2021-01-13,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",104226
+237,Robert,Clark,robert.clark@horizontech.com,2025-01-09,Director of Sales & Marketing,3.0,9.0,Active,Remote,141373
+238,Robert,Stein,robert.stein@horizontech.com,2019-01-31,Junior Sales & Marketing Specialist,3.0,220.0,Active,"New York, NY",53276
+239,Brandy,Dominguez,brandy.dominguez@horizontech.com,2022-02-11,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",95588
+240,Melissa,Cannon,melissa.cannon@horizontech.com,2018-05-01,Junior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",56051
+241,Omar,Smith,omar.smith@horizontech.com,2024-10-21,Senior Sales & Marketing Specialist,3.0,220.0,Terminated,"San Francisco, CA",84716
+242,Michael,Molina,michael.molina@horizontech.com,2023-04-24,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",163661
+243,Melissa,Ashley,melissa.ashley@horizontech.com,2024-05-24,Senior Sales & Marketing Specialist,3.0,220.0,Active,"Boston, MA",93366
+244,Robert,Adkins,robert.adkins@horizontech.com,2020-06-01,Junior Sales & Marketing Specialist,3.0,220.0,Leave,"San Francisco, CA",56107
+245,Amy,Morrison,amy.morrison@horizontech.com,2020-12-02,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",91998
+246,Jeffrey,Robinson,jeffrey.robinson@horizontech.com,2023-08-10,Sales & Marketing Manager,3.0,219.0,Active,"Austin, TX",112212
+247,Ryan,Johnson,ryan.johnson@horizontech.com,2020-01-04,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",96833
+248,Matthew,Shelton,matthew.shelton@horizontech.com,2024-12-02,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",85644
+249,Richard,Martin,richard.martin@horizontech.com,2023-03-29,Junior Sales & Marketing Specialist,3.0,220.0,Active,"Boston, MA",59856
+250,Tanner,Anderson,tanner.anderson@horizontech.com,2019-12-02,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",248099
+251,Cindy,Johnson,cindy.johnson@horizontech.com,2019-02-21,Director of Sales & Marketing,3.0,9.0,Active,"Seattle, WA",150289
+252,Phillip,Elliott,phillip.elliott@horizontech.com,2025-04-16,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",122648
+253,Anthony,Day,anthony.day@horizontech.com,2021-12-26,Junior Sales & Marketing Specialist,3.0,220.0,Active,Remote,61342
+254,Derek,Murray,derek.murray@horizontech.com,2021-11-08,Sales & Marketing Team Lead,3.0,220.0,Active,Remote,106883
+255,Brent,Gray,brent.gray@horizontech.com,2024-05-15,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",89870
+256,Jason,Murphy,jason.murphy@horizontech.com,2021-07-11,Mid-level Sales & Marketing Specialist,3.0,220.0,Terminated,"San Francisco, CA",67578
+257,Kathleen,Gray,kathleen.gray@horizontech.com,2019-05-29,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",108446
+258,Karen,Decker,karen.decker@horizontech.com,2023-04-12,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",225846
+259,Johnny,Miller,johnny.miller@horizontech.com,2018-10-26,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",248876
+260,Andrew,Ryan,andrew.ryan@horizontech.com,2022-07-04,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",121455
+261,Zoe,Bell,zoe.bell@horizontech.com,2024-08-25,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",93820
+262,Debra,Harrington,debra.harrington@horizontech.com,2019-03-10,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",164305
+263,Denise,Webster,denise.webster@horizontech.com,2021-01-01,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",53793
+264,Stefanie,Gonzalez,stefanie.gonzalez@horizontech.com,2023-06-22,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",153048
+265,Andrew,Hernandez,andrew.hernandez@horizontech.com,2018-05-29,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",68737
+266,David,Caldwell,david.caldwell@horizontech.com,2024-06-06,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",104601
+267,Anne,Robinson,anne.robinson@horizontech.com,2024-11-21,Sales & Marketing Manager,3.0,219.0,Active,"Seattle, WA",128603
+268,Holly,Wang,holly.wang@horizontech.com,2021-02-08,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",62849
+269,Gary,Lawson,gary.lawson@horizontech.com,2023-09-21,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",97066
+270,Julie,Wilson,julie.wilson@horizontech.com,2024-09-30,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",116089
+271,Lori,Oconnell,lori.oconnell@horizontech.com,2022-09-28,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",268825
+272,Daniel,Johnson,daniel.johnson@horizontech.com,2018-11-07,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",62820
+273,Larry,Byrd,larry.byrd@horizontech.com,2021-07-06,Junior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",57346
+274,Susan,Sanders,susan.sanders@horizontech.com,2022-04-03,Junior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",52542
+275,Jennifer,Jones,jennifer.jones@horizontech.com,2019-11-02,Sales & Marketing Manager,3.0,219.0,Active,"Boston, MA",106820
+276,Hannah,Burton,hannah.burton@horizontech.com,2018-09-29,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",72310
+277,Curtis,Barton,curtis.barton@horizontech.com,2022-05-24,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",91327
+278,Melissa,Burke,melissa.burke@horizontech.com,2021-12-19,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",109998
+279,David,Riggs,david.riggs@horizontech.com,2024-05-08,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",165814
+280,Kimberly,Reed,kimberly.reed@horizontech.com,2021-05-11,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",87431
+281,Ross,Wood,ross.wood@horizontech.com,2023-09-15,Junior Sales & Marketing Specialist,3.0,220.0,Leave,"San Francisco, CA",52972
+282,William,Peterson,william.peterson@horizontech.com,2022-02-06,Junior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",55258
+283,Melissa,Short,melissa.short@horizontech.com,2019-11-18,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",271720
+284,Daniel,Yu,daniel.yu@horizontech.com,2022-10-04,Mid-level Sales & Marketing Specialist,3.0,220.0,Leave,"Austin, TX",63810
+285,Cynthia,Poole,cynthia.poole@horizontech.com,2019-04-25,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",132775
+286,Jasmine,Graham,jasmine.graham@horizontech.com,2019-09-09,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",76986
+287,Jessica,Sheppard,jessica.sheppard@horizontech.com,2021-03-29,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"Austin, TX",69241
+288,Joseph,Morton,joseph.morton@horizontech.com,2019-07-08,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",119902
+289,Amanda,Webb,amanda.webb@horizontech.com,2024-08-06,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",91873
+290,Ryan,Simon,ryan.simon@horizontech.com,2019-01-04,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",66886
+291,Joseph,Christian,joseph.christian@horizontech.com,2021-09-09,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",68959
+292,Mariah,Miller,mariah.miller@horizontech.com,2018-09-20,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",230139
+293,Nicole,Sanchez,nicole.sanchez@horizontech.com,2020-12-07,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",228212
+294,Steven,Bishop,steven.bishop@horizontech.com,2022-06-18,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",105664
+295,Nicholas,Johnson,nicholas.johnson@horizontech.com,2023-01-01,Senior Sales & Marketing Specialist,3.0,220.0,Active,"San Francisco, CA",92380
+296,Melissa,White,melissa.white@horizontech.com,2019-05-31,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",95380
+297,Jason,Salinas,jason.salinas@horizontech.com,2018-09-02,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",122496
+298,Matthew,Beard,matthew.beard@horizontech.com,2020-12-13,Sales & Marketing Team Lead,3.0,220.0,Active,"San Francisco, CA",102048
+299,Jacqueline,Hill,jacqueline.hill@horizontech.com,2022-06-03,Mid-level Sales & Marketing Specialist,3.0,220.0,Active,"Seattle, WA",74064
+300,Alejandro,Vaughan,alejandro.vaughan@horizontech.com,2018-12-25,Sales & Marketing Manager,3.0,219.0,Active,"San Francisco, CA",120246
+301,Christopher,Cortez,christopher.cortez@horizontech.com,2023-05-27,VP of Sales & Marketing,3.0,220.0,Active,"San Francisco, CA",223420
+302,Tracy,Chang,tracy.chang@horizontech.com,2024-12-30,Mid-level Sales & Marketing Specialist,3.0,220.0,Leave,"San Francisco, CA",67199
+303,Hannah,Brewer,hannah.brewer@horizontech.com,2021-01-12,Sales & Marketing Manager,3.0,219.0,Leave,"New York, NY",121227
+304,Travis,Mcguire,travis.mcguire@horizontech.com,2019-01-27,Director of Sales & Marketing,3.0,9.0,Active,"San Francisco, CA",172120
+305,Christopher,Walker,christopher.walker@horizontech.com,2020-09-21,Senior Customer Success Specialist,4.0,10.0,Active,"San Francisco, CA",89860
+306,Heather,Torres,heather.torres@horizontech.com,2019-12-16,Junior Customer Success Specialist,4.0,10.0,Active,"San Francisco, CA",52988
+307,Bonnie,Kennedy,bonnie.kennedy@horizontech.com,2019-12-04,Customer Success Manager,4.0,10.0,Leave,"San Francisco, CA",125647
+308,Alyssa,Coleman,alyssa.coleman@horizontech.com,2020-04-04,Junior Customer Success Specialist,4.0,307.0,Active,Remote,50035
+309,Julie,Rivera,julie.rivera@horizontech.com,2018-06-20,Director of Customer Success,4.0,10.0,Active,"New York, NY",171382
+310,Jacqueline,Nelson,jacqueline.nelson@horizontech.com,2021-12-07,Senior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",88652
+311,John,Martinez,john.martinez@horizontech.com,2023-01-09,Director of Customer Success,4.0,10.0,Active,"San Francisco, CA",162460
+312,James,Wilson,james.wilson@horizontech.com,2023-05-01,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",107325
+313,Amanda,Gill,amanda.gill@horizontech.com,2023-05-16,VP of Customer Success,4.0,307.0,Active,"Boston, MA",256508
+314,Jacob,Robinson,jacob.robinson@horizontech.com,2024-02-24,VP of Customer Success,4.0,307.0,Active,"San Francisco, CA",256270
+315,Todd,Hardy,todd.hardy@horizontech.com,2018-12-26,VP of Customer Success,4.0,307.0,Terminated,"Austin, TX",266109
+316,Tiffany,Warren,tiffany.warren@horizontech.com,2019-07-07,Customer Success Team Lead,4.0,307.0,Active,"Boston, MA",100140
+317,Justin,Garcia,justin.garcia@horizontech.com,2019-03-17,VP of Customer Success,4.0,307.0,Active,"San Francisco, CA",253639
+318,James,Perez,james.perez@horizontech.com,2021-05-21,Director of Customer Success,4.0,10.0,Active,"San Francisco, CA",161380
+319,Harry,Smith,harry.smith@horizontech.com,2021-12-12,Mid-level Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",71620
+320,Amanda,Hill,amanda.hill@horizontech.com,2023-05-23,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",113915
+321,Terri,Tran,terri.tran@horizontech.com,2019-08-02,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",52904
+322,Heidi,Martinez,heidi.martinez@horizontech.com,2024-06-26,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",54979
+323,Miranda,Henry,miranda.henry@horizontech.com,2020-11-11,Customer Success Team Lead,4.0,307.0,Active,"Austin, TX",94545
+324,Monique,Andrews,monique.andrews@horizontech.com,2022-12-19,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",113949
+325,Taylor,Alexander,taylor.alexander@horizontech.com,2021-02-28,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",106616
+326,Jack,Williams,jack.williams@horizontech.com,2019-01-20,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",91905
+327,Shelley,Woods,shelley.woods@horizontech.com,2019-05-21,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",107720
+328,Lynn,Morales,lynn.morales@horizontech.com,2024-07-16,Director of Customer Success,4.0,10.0,Active,"Seattle, WA",174236
+329,Charles,Soto,charles.soto@horizontech.com,2021-12-31,Senior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",94160
+330,Brian,Hernandez,brian.hernandez@horizontech.com,2023-01-17,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",55118
+331,Anna,Torres,anna.torres@horizontech.com,2025-01-13,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",114897
+332,Victoria,Wilson,victoria.wilson@horizontech.com,2020-09-08,Senior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",84018
+333,Kathy,Obrien,kathy.obrien@horizontech.com,2019-07-08,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",52815
+334,Krystal,Perez,krystal.perez@horizontech.com,2021-06-05,VP of Customer Success,4.0,307.0,Active,"Austin, TX",226456
+335,Alexandra,Hayes,alexandra.hayes@horizontech.com,2024-08-04,Junior Customer Success Specialist,4.0,307.0,Leave,"Austin, TX",56562
+336,Scott,Dalton,scott.dalton@horizontech.com,2024-07-18,Senior Customer Success Specialist,4.0,307.0,Active,"Boston, MA",89019
+337,Veronica,Torres,veronica.torres@horizontech.com,2021-04-20,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",49060
+338,Christine,Lynch,christine.lynch@horizontech.com,2021-10-07,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",51160
+339,Jody,Meza,jody.meza@horizontech.com,2019-11-28,Director of Customer Success,4.0,10.0,Active,"San Francisco, CA",169817
+340,Jared,Clark,jared.clark@horizontech.com,2018-08-24,Director of Customer Success,4.0,10.0,Active,"San Francisco, CA",158423
+341,Donna,Moore,donna.moore@horizontech.com,2023-01-04,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",94518
+342,Glenn,Jones,glenn.jones@horizontech.com,2021-12-09,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",117030
+343,Aaron,Hayes,aaron.hayes@horizontech.com,2018-11-22,VP of Customer Success,4.0,307.0,Active,"New York, NY",244899
+344,Brittney,Carter,brittney.carter@horizontech.com,2019-03-21,VP of Customer Success,4.0,307.0,Active,"San Francisco, CA",229861
+345,Jesse,Mann,jesse.mann@horizontech.com,2025-02-09,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",96859
+346,Jacqueline,Gibson,jacqueline.gibson@horizontech.com,2024-01-18,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",53466
+347,Grace,Bradshaw,grace.bradshaw@horizontech.com,2024-12-14,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",102932
+348,Kristin,Weber,kristin.weber@horizontech.com,2020-10-10,VP of Customer Success,4.0,307.0,Active,"San Francisco, CA",211850
+349,Donna,Peck,donna.peck@horizontech.com,2020-08-05,VP of Customer Success,4.0,307.0,Active,"San Francisco, CA",225631
+350,Ronald,Stephens,ronald.stephens@horizontech.com,2021-03-02,Director of Customer Success,4.0,10.0,Active,"San Francisco, CA",162509
+351,Deborah,Kerr,deborah.kerr@horizontech.com,2023-02-17,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",102072
+352,Margaret,Jones,margaret.jones@horizontech.com,2020-11-18,Mid-level Customer Success Specialist,4.0,307.0,Active,"Austin, TX",77376
+353,Gabriel,Parker,gabriel.parker@horizontech.com,2022-04-10,Junior Customer Success Specialist,4.0,307.0,Active,Remote,56073
+354,Kaitlyn,Carroll,kaitlyn.carroll@horizontech.com,2023-03-12,VP of Customer Success,4.0,307.0,Active,"Boston, MA",236801
+355,Keith,Martinez,keith.martinez@horizontech.com,2021-10-24,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",52420
+356,Haley,Lyons,haley.lyons@horizontech.com,2022-12-26,Mid-level Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",64987
+357,Sherri,Mason,sherri.mason@horizontech.com,2020-03-24,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",114845
+358,Troy,Miller,troy.miller@horizontech.com,2022-05-12,Junior Customer Success Specialist,4.0,307.0,Active,"Austin, TX",51297
+359,Bill,Reynolds,bill.reynolds@horizontech.com,2023-03-10,Director of Customer Success,4.0,10.0,Active,"San Francisco, CA",168765
+360,Marcus,Wright,marcus.wright@horizontech.com,2021-10-12,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",94485
+361,Christopher,Hayden,christopher.hayden@horizontech.com,2020-03-09,Junior Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",54663
+362,Mary,Johnston,mary.johnston@horizontech.com,2024-01-08,Senior Customer Success Specialist,4.0,307.0,Active,"New York, NY",100218
+363,Stephanie,Key,stephanie.key@horizontech.com,2019-12-16,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",114093
+364,Emily,Adams,emily.adams@horizontech.com,2020-03-31,Director of Customer Success,4.0,10.0,Active,"New York, NY",169686
+365,Billy,Avila,billy.avila@horizontech.com,2019-02-23,Mid-level Customer Success Specialist,4.0,307.0,Active,"New York, NY",73450
+366,Thomas,Pearson,thomas.pearson@horizontech.com,2023-07-04,Customer Success Team Lead,4.0,307.0,Active,"New York, NY",97325
+367,Sabrina,White,sabrina.white@horizontech.com,2024-08-19,Customer Success Team Lead,4.0,307.0,Active,"Seattle, WA",101493
+368,Brenda,Walters,brenda.walters@horizontech.com,2021-11-05,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",115104
+369,Travis,Davis,travis.davis@horizontech.com,2021-09-12,Customer Success Team Lead,4.0,307.0,Active,"San Francisco, CA",100651
+370,Michael,Cook,michael.cook@horizontech.com,2023-12-29,Customer Success Manager,4.0,309.0,Active,"San Francisco, CA",108558
+371,Elizabeth,Hodge,elizabeth.hodge@horizontech.com,2018-12-10,VP of Customer Success,4.0,307.0,Active,"San Francisco, CA",240490
+372,Mark,Steele,mark.steele@horizontech.com,2019-04-25,Mid-level Customer Success Specialist,4.0,307.0,Active,"San Francisco, CA",72489
+373,Keith,Landry,keith.landry@horizontech.com,2024-10-23,Finance & Accounting Team Lead,5.0,11.0,Active,"New York, NY",109674
+374,Lisa,Pierce,lisa.pierce@horizontech.com,2023-05-07,VP of Finance & Accounting,5.0,373.0,Active,Remote,259185
+375,Shawn,Edwards,shawn.edwards@horizontech.com,2021-11-27,Director of Finance & Accounting,5.0,11.0,Active,Remote,190120
+376,Marcus,Cordova,marcus.cordova@horizontech.com,2023-05-10,VP of Finance & Accounting,5.0,373.0,Active,Remote,224653
+377,Richard,Robertson,richard.robertson@horizontech.com,2019-04-01,Finance & Accounting Manager,5.0,375.0,Active,Remote,122269
+378,Vanessa,Sandoval,vanessa.sandoval@horizontech.com,2023-03-19,Director of Finance & Accounting,5.0,11.0,Terminated,Remote,167138
+379,Amy,Gutierrez,amy.gutierrez@horizontech.com,2020-01-31,Senior Finance & Accounting Specialist,5.0,373.0,Active,"Boston, MA",104598
+380,Jacob,Cox,jacob.cox@horizontech.com,2022-11-20,Finance & Accounting Team Lead,5.0,377.0,Active,Remote,94611
+381,Katherine,Garrett,katherine.garrett@horizontech.com,2022-01-20,VP of Finance & Accounting,5.0,373.0,Active,Remote,223205
+382,Kathleen,Harris,kathleen.harris@horizontech.com,2022-08-21,Mid-level Finance & Accounting Specialist,5.0,373.0,Active,"San Francisco, CA",67003
+383,Andrea,Pennington,andrea.pennington@horizontech.com,2025-01-22,Mid-level Finance & Accounting Specialist,5.0,373.0,Active,Remote,59380
+384,Samuel,Wolfe,samuel.wolfe@horizontech.com,2019-11-21,Senior Finance & Accounting Specialist,5.0,373.0,Active,Remote,86494
+385,David,Dudley,david.dudley@horizontech.com,2022-09-12,Mid-level Finance & Accounting Specialist,5.0,373.0,Active,"San Francisco, CA",66204
+386,Chelsea,Allen,chelsea.allen@horizontech.com,2021-10-10,VP of Finance & Accounting,5.0,373.0,Active,Remote,243007
+387,Eric,Pierce,eric.pierce@horizontech.com,2019-09-26,Finance & Accounting Manager,5.0,375.0,Active,"Austin, TX",117847
+388,Andrea,Davis,andrea.davis@horizontech.com,2024-03-16,Mid-level Finance & Accounting Specialist,5.0,373.0,Active,Remote,79380
+389,Victoria,Durham,victoria.durham@horizontech.com,2022-05-12,Senior Finance & Accounting Specialist,5.0,373.0,Active,Remote,96336
+390,Steven,Wilson,steven.wilson@horizontech.com,2022-02-18,Director of Finance & Accounting,5.0,11.0,Active,Remote,158269
+391,Marilyn,Jimenez,marilyn.jimenez@horizontech.com,2019-11-05,Director of Finance & Accounting,5.0,11.0,Active,Remote,154518
+392,Jennifer,Hicks,jennifer.hicks@horizontech.com,2019-06-09,Junior Finance & Accounting Specialist,5.0,373.0,Active,Remote,54549
+393,Joshua,Davenport,joshua.davenport@horizontech.com,2024-03-16,Mid-level Finance & Accounting Specialist,5.0,373.0,Active,Remote,63398
+394,Tina,Sanchez,tina.sanchez@horizontech.com,2025-03-26,Junior Finance & Accounting Specialist,5.0,373.0,Active,Remote,60131
+395,Andrea,Reyes,andrea.reyes@horizontech.com,2020-04-30,Director of Finance & Accounting,5.0,11.0,Active,"New York, NY",178760
+396,Sandra,Romero,sandra.romero@horizontech.com,2020-02-28,Junior Finance & Accounting Specialist,5.0,373.0,Active,Remote,50545
+397,Natasha,Shields,natasha.shields@horizontech.com,2020-12-18,Finance & Accounting Manager,5.0,375.0,Leave,Remote,100723
+398,Joshua,Tyler,joshua.tyler@horizontech.com,2023-05-03,Junior Finance & Accounting Specialist,5.0,373.0,Active,Remote,58141
+399,Robert,Villa,robert.villa@horizontech.com,2023-07-25,Junior Finance & Accounting Specialist,5.0,373.0,Active,Remote,52022
+400,William,Hoover,william.hoover@horizontech.com,2024-09-12,Mid-level Finance & Accounting Specialist,5.0,373.0,Leave,Remote,76189
+401,Justin,Evans,justin.evans@horizontech.com,2022-08-02,Finance & Accounting Manager,5.0,375.0,Active,Remote,101713
+402,Brenda,Duarte,brenda.duarte@horizontech.com,2020-07-16,Director of Human Resources,6.0,12.0,Active,Remote,158007
+403,Tracy,Hernandez,tracy.hernandez@horizontech.com,2018-11-20,Human Resources Manager,6.0,402.0,Active,Remote,115043
+404,Amanda,Reed,amanda.reed@horizontech.com,2019-06-15,Senior Human Resources Specialist,6.0,403.0,Active,Remote,90313
+405,Andrea,Daniels,andrea.daniels@horizontech.com,2021-07-01,VP of Human Resources,6.0,403.0,Active,Remote,230998
+406,Stanley,Morris,stanley.morris@horizontech.com,2024-01-22,Human Resources Team Lead,6.0,403.0,Active,Remote,104152
+407,Jacob,Terry,jacob.terry@horizontech.com,2023-05-12,Director of Human Resources,6.0,12.0,Active,"Boston, MA",152544
+408,Ashley,Hall,ashley.hall@horizontech.com,2018-11-25,Human Resources Team Lead,6.0,403.0,Active,Remote,99050
+409,Kimberly,Williams,kimberly.williams@horizontech.com,2019-03-21,Human Resources Team Lead,6.0,403.0,Active,Remote,100801
+410,Julie,Thornton,julie.thornton@horizontech.com,2022-01-23,VP of Human Resources,6.0,403.0,Active,Remote,250288
+411,Lisa,Hughes,lisa.hughes@horizontech.com,2023-08-08,Human Resources Manager,6.0,402.0,Active,Remote,120930
+412,Elizabeth,Hoover,elizabeth.hoover@horizontech.com,2023-07-25,Mid-level Human Resources Specialist,6.0,403.0,Active,Remote,64376
+413,Tina,Simpson,tina.simpson@horizontech.com,2018-07-07,VP of Human Resources,6.0,403.0,Active,"Austin, TX",209317
+414,Benjamin,Shaw,benjamin.shaw@horizontech.com,2025-02-16,Senior Human Resources Specialist,6.0,403.0,Active,Remote,98517
+415,Brittany,Kane,brittany.kane@horizontech.com,2020-12-19,Human Resources Manager,6.0,402.0,Active,Remote,117769
+416,Morgan,Alexander,morgan.alexander@horizontech.com,2025-04-15,Human Resources Team Lead,6.0,403.0,Active,Remote,95010
+417,Alicia,Bryant,alicia.bryant@horizontech.com,2024-12-29,Human Resources Team Lead,6.0,403.0,Active,Remote,110341
+418,Jennifer,Ortiz,jennifer.ortiz@horizontech.com,2021-01-05,Senior Human Resources Specialist,6.0,403.0,Active,Remote,90771
+419,Diana,Moore,diana.moore@horizontech.com,2025-03-13,VP of Human Resources,6.0,403.0,Active,Remote,263585
+420,Terrance,Costa,terrance.costa@horizontech.com,2019-04-06,Director of Human Resources,6.0,12.0,Active,Remote,165787
+421,Matthew,Schwartz,matthew.schwartz@horizontech.com,2024-05-27,Senior Human Resources Specialist,6.0,403.0,Active,"Seattle, WA",103738
+422,Debra,Christian,debra.christian@horizontech.com,2018-07-13,Senior Human Resources Specialist,6.0,403.0,Active,Remote,101702
+423,Melissa,Villarreal,melissa.villarreal@horizontech.com,2022-08-22,Mid-level Human Resources Specialist,6.0,403.0,Leave,Remote,68755
+424,Norman,Stewart,norman.stewart@horizontech.com,2022-04-22,VP of Human Resources,6.0,403.0,Active,Remote,259431
+425,Jennifer,Malone,jennifer.malone@horizontech.com,2019-06-19,Mid-level Human Resources Specialist,6.0,403.0,Active,"San Francisco, CA",73226
+426,Monique,Johnson,monique.johnson@horizontech.com,2019-10-19,Operations Manager,7.0,13.0,Active,"Boston, MA",126405
+427,Casey,Welch,casey.welch@horizontech.com,2020-04-07,Junior Operations Specialist,7.0,426.0,Active,"Boston, MA",48479
+428,Samantha,Bright,samantha.bright@horizontech.com,2023-09-02,Mid-level Operations Specialist,7.0,426.0,Active,"Austin, TX",73430
+429,Julie,Hamilton,julie.hamilton@horizontech.com,2023-06-08,VP of Operations,7.0,426.0,Active,"Boston, MA",261168
+430,Corey,Schultz,corey.schultz@horizontech.com,2020-07-16,Junior Operations Specialist,7.0,426.0,Active,"Boston, MA",45171
+431,Monique,Wallace,monique.wallace@horizontech.com,2024-01-31,Operations Manager,7.0,13.0,Active,"Austin, TX",105139
+432,Heather,Berger,heather.berger@horizontech.com,2021-02-21,Operations Team Lead,7.0,426.0,Active,"Boston, MA",86405
+433,Brandon,Flynn,brandon.flynn@horizontech.com,2022-04-22,Operations Manager,7.0,13.0,Active,"Boston, MA",112754
+434,Kelly,Brooks,kelly.brooks@horizontech.com,2022-01-09,Mid-level Operations Specialist,7.0,426.0,Active,"New York, NY",73587
+435,Dustin,Schmidt,dustin.schmidt@horizontech.com,2022-10-15,Operations Team Lead,7.0,426.0,Active,Remote,110015
+436,Ashlee,Sparks,ashlee.sparks@horizontech.com,2022-02-07,Operations Team Lead,7.0,426.0,Leave,"Boston, MA",100493
+437,George,Miller,george.miller@horizontech.com,2022-06-03,Operations Team Lead,7.0,426.0,Active,"Boston, MA",110857
+438,Monica,Harvey,monica.harvey@horizontech.com,2019-03-25,Junior Operations Specialist,7.0,426.0,Active,"Boston, MA",46749
+439,John,Durham,john.durham@horizontech.com,2020-04-29,Senior Operations Specialist,7.0,426.0,Active,"Boston, MA",78644
+440,Douglas,Murray,douglas.murray@horizontech.com,2021-12-24,VP of Operations,7.0,426.0,Active,"Boston, MA",238889
+441,Jonathan,Scott,jonathan.scott@horizontech.com,2023-01-30,Senior Operations Specialist,7.0,426.0,Active,"Boston, MA",92560
+442,Albert,Ballard,albert.ballard@horizontech.com,2018-10-11,Operations Team Lead,7.0,426.0,Active,"Boston, MA",99782
+443,Rachel,Byrd,rachel.byrd@horizontech.com,2023-03-07,Senior Operations Specialist,7.0,426.0,Active,"Seattle, WA",76217
+444,Eric,Alexander,eric.alexander@horizontech.com,2019-02-22,VP of Operations,7.0,426.0,Active,"Boston, MA",238217
+445,Michael,Matthews,michael.matthews@horizontech.com,2020-02-05,Senior Operations Specialist,7.0,426.0,Leave,"Boston, MA",81303
+446,Danielle,Coleman,danielle.coleman@horizontech.com,2023-03-20,Senior Operations Specialist,7.0,426.0,Active,"Boston, MA",94464
+447,John,Bruce,john.bruce@horizontech.com,2022-05-30,Junior Operations Specialist,7.0,426.0,Active,"Boston, MA",54027
+448,James,Cruz,james.cruz@horizontech.com,2025-02-01,VP of Operations,7.0,426.0,Active,"Boston, MA",221202
+449,Timothy,Young,timothy.young@horizontech.com,2022-06-22,Operations Manager,7.0,13.0,Active,"Boston, MA",110717
+450,Ashley,Andrews,ashley.andrews@horizontech.com,2024-03-28,Director of Operations,7.0,13.0,Active,"Boston, MA",152642
+451,Victoria,Phillips,victoria.phillips@horizontech.com,2021-02-06,Operations Manager,7.0,450.0,Leave,"Boston, MA",114477
+452,Tiffany,Barrett,tiffany.barrett@horizontech.com,2023-11-25,Director of Operations,7.0,13.0,Active,"Boston, MA",176143
+453,Joshua,Knight,joshua.knight@horizontech.com,2021-03-28,VP of Operations,7.0,426.0,Active,"San Francisco, CA",220285
+454,Gina,Garner,gina.garner@horizontech.com,2025-03-01,Director of Operations,7.0,13.0,Active,"Boston, MA",170880
+455,Brandon,Obrien,brandon.obrien@horizontech.com,2020-07-18,Operations Team Lead,7.0,426.0,Active,Remote,96464
+456,Tyler,Strong,tyler.strong@horizontech.com,2020-03-28,Operations Team Lead,7.0,426.0,Active,"Boston, MA",94714
+457,Justin,Lindsey,justin.lindsey@horizontech.com,2021-11-20,VP of Operations,7.0,426.0,Active,"San Francisco, CA",237859
+458,Catherine,Gomez,catherine.gomez@horizontech.com,2024-05-19,Senior Operations Specialist,7.0,426.0,Active,"Boston, MA",83098
+459,Dana,Oliver,dana.oliver@horizontech.com,2020-04-03,Director of Operations,7.0,13.0,Active,"Boston, MA",158540
+460,Erica,Le,erica.le@horizontech.com,2020-07-22,VP of Operations,7.0,426.0,Active,"Boston, MA",216042
+461,Donna,Massey,donna.massey@horizontech.com,2018-08-06,Operations Team Lead,7.0,426.0,Active,"Boston, MA",113098
+462,Courtney,Berger,courtney.berger@horizontech.com,2024-06-27,Operations Team Lead,7.0,426.0,Active,Remote,100235
+463,Debbie,Parker,debbie.parker@horizontech.com,2021-10-08,VP of Operations,7.0,426.0,Active,"San Francisco, CA",226005
+464,Scott,Riley,scott.riley@horizontech.com,2024-03-13,Operations Team Lead,7.0,426.0,Active,"Boston, MA",101426
+465,Jessica,Davis,jessica.davis@horizontech.com,2019-02-17,Senior Operations Specialist,7.0,426.0,Active,"Boston, MA",89251
+466,Kenneth,Burgess,kenneth.burgess@horizontech.com,2023-05-08,VP of Operations,7.0,426.0,Active,"Boston, MA",235580
+467,Gregory,Anderson,gregory.anderson@horizontech.com,2024-06-26,Director of Operations,7.0,13.0,Active,"Boston, MA",172165
+468,Amber,Mata,amber.mata@horizontech.com,2023-02-26,Director of Operations,7.0,13.0,Active,Remote,173837
+469,Alyssa,Mcintyre,alyssa.mcintyre@horizontech.com,2019-09-11,Junior Research & Development Specialist,8.0,14.0,Active,"San Francisco, CA",50289
+470,Maria,Scott,maria.scott@horizontech.com,2021-12-02,Director of Research & Development,8.0,14.0,Active,"San Francisco, CA",158282
+471,Makayla,Olson,makayla.olson@horizontech.com,2021-06-27,Senior Research & Development Specialist,8.0,14.0,Active,"San Francisco, CA",88166
+472,Lindsay,Francis,lindsay.francis@horizontech.com,2024-06-24,Mid-level Research & Development Specialist,8.0,14.0,Active,"San Francisco, CA",58490
+473,Matthew,Wilson,matthew.wilson@horizontech.com,2024-04-14,Senior Research & Development Specialist,8.0,14.0,Active,"San Francisco, CA",79898
+474,Sydney,Taylor,sydney.taylor@horizontech.com,2024-10-24,Senior Research & Development Specialist,8.0,14.0,Active,"San Francisco, CA",99112
+475,Tammy,Dalton,tammy.dalton@horizontech.com,2025-02-01,Mid-level Research & Development Specialist,8.0,14.0,Active,"Boston, MA",78224
+476,Jennifer,Whitney,jennifer.whitney@horizontech.com,2018-08-15,VP of Research & Development,8.0,14.0,Active,"Boston, MA",235019
+477,Tammy,Ballard,tammy.ballard@horizontech.com,2024-10-08,Junior Research & Development Specialist,8.0,14.0,Active,"San Francisco, CA",54902
+478,Michael,Gibbs,michael.gibbs@horizontech.com,2022-12-22,Senior Research & Development Specialist,8.0,14.0,Active,"San Francisco, CA",92075
+479,Alexander,Herrera,alexander.herrera@horizontech.com,2024-06-02,Mid-level Research & Development Specialist,8.0,14.0,Active,"Seattle, WA",85394
+480,Shawn,Chambers,shawn.chambers@horizontech.com,2021-01-18,Research & Development Team Lead,8.0,14.0,Active,"San Francisco, CA",107463
+481,Emily,Richards,emily.richards@horizontech.com,2023-05-22,Research & Development Manager,8.0,470.0,Active,"San Francisco, CA",113934
+482,Lynn,Bentley,lynn.bentley@horizontech.com,2022-12-18,Research & Development Team Lead,8.0,481.0,Active,"San Francisco, CA",93629
+483,Daniel,Hall,daniel.hall@horizontech.com,2019-11-30,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",79290
+484,Angel,Henson,angel.henson@horizontech.com,2022-03-05,Mid-level Research & Development Specialist,8.0,480.0,Leave,"San Francisco, CA",71017
+485,Anna,Herman,anna.herman@horizontech.com,2024-01-29,Research & Development Manager,8.0,470.0,Active,"San Francisco, CA",108697
+486,Jeffrey,Brown,jeffrey.brown@horizontech.com,2019-09-04,Research & Development Team Lead,8.0,481.0,Active,"San Francisco, CA",90518
+487,Madison,Blankenship,madison.blankenship@horizontech.com,2018-11-14,VP of Research & Development,8.0,480.0,Active,"San Francisco, CA",227068
+488,Kevin,Ortiz,kevin.ortiz@horizontech.com,2022-12-28,Senior Research & Development Specialist,8.0,480.0,Active,Remote,82789
+489,Donald,Shah,donald.shah@horizontech.com,2021-12-22,Director of Research & Development,8.0,14.0,Active,"San Francisco, CA",184683
+490,Kevin,Vasquez,kevin.vasquez@horizontech.com,2020-02-02,Director of Research & Development,8.0,14.0,Active,"San Francisco, CA",175285
+491,Colton,Clay,colton.clay@horizontech.com,2021-10-05,Research & Development Team Lead,8.0,481.0,Active,"San Francisco, CA",99946
+492,Derek,Chavez,derek.chavez@horizontech.com,2023-12-21,Research & Development Team Lead,8.0,481.0,Active,"San Francisco, CA",109866
+493,Ellen,Paul,ellen.paul@horizontech.com,2022-04-05,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",90515
+494,Sonya,Barnes,sonya.barnes@horizontech.com,2023-07-31,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",84258
+495,Julia,Moore,julia.moore@horizontech.com,2023-02-19,VP of Research & Development,8.0,480.0,Active,"San Francisco, CA",270462
+496,Robert,Garcia,robert.garcia@horizontech.com,2022-10-28,Research & Development Manager,8.0,470.0,Active,"San Francisco, CA",119490
+497,Tracy,Russell,tracy.russell@horizontech.com,2024-08-08,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",83085
+498,Stephanie,Johnson,stephanie.johnson@horizontech.com,2022-08-20,VP of Research & Development,8.0,480.0,Active,"New York, NY",236193
+499,Mitchell,Ramos,mitchell.ramos@horizontech.com,2025-04-16,Research & Development Manager,8.0,470.0,Active,"San Francisco, CA",107703
+500,Stephanie,Foley,stephanie.foley@horizontech.com,2022-09-20,VP of Research & Development,8.0,480.0,Active,"Seattle, WA",212344
+501,Cory,Jennings,cory.jennings@horizontech.com,2022-05-27,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",96174
+502,Amy,Levine,amy.levine@horizontech.com,2022-10-21,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",102729
+503,Michael,Sanders,michael.sanders@horizontech.com,2022-01-14,Director of Research & Development,8.0,14.0,Active,"San Francisco, CA",148683
+504,James,Martinez,james.martinez@horizontech.com,2025-02-06,Director of Research & Development,8.0,14.0,Active,"San Francisco, CA",171567
+505,Melanie,Gibson,melanie.gibson@horizontech.com,2021-11-15,Senior Research & Development Specialist,8.0,480.0,Active,"Seattle, WA",85662
+506,Elizabeth,May,elizabeth.may@horizontech.com,2021-08-28,Mid-level Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",67564
+507,Carla,Smith,carla.smith@horizontech.com,2024-04-09,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",86050
+508,Kristin,Sanchez,kristin.sanchez@horizontech.com,2018-06-28,Research & Development Team Lead,8.0,481.0,Active,"San Francisco, CA",94240
+509,David,Cunningham,david.cunningham@horizontech.com,2024-11-05,Research & Development Team Lead,8.0,481.0,Active,Remote,100323
+510,Casey,Hubbard,casey.hubbard@horizontech.com,2018-08-08,Junior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",49037
+511,Jamie,Robinson,jamie.robinson@horizontech.com,2024-10-15,Mid-level Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",71352
+512,Molly,Murphy,molly.murphy@horizontech.com,2023-09-09,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",89665
+513,Dylan,Lester,dylan.lester@horizontech.com,2022-07-26,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",88407
+514,Aaron,Garrison,aaron.garrison@horizontech.com,2024-09-21,VP of Research & Development,8.0,480.0,Active,"San Francisco, CA",221848
+515,Duane,Anderson,duane.anderson@horizontech.com,2023-04-01,VP of Research & Development,8.0,480.0,Active,"San Francisco, CA",228464
+516,John,Thompson,john.thompson@horizontech.com,2020-08-03,Mid-level Research & Development Specialist,8.0,480.0,Active,"New York, NY",73776
+517,Donna,Johnson,donna.johnson@horizontech.com,2019-01-01,Research & Development Team Lead,8.0,481.0,Active,"San Francisco, CA",103339
+518,Alexis,Tyler,alexis.tyler@horizontech.com,2021-12-12,Senior Research & Development Specialist,8.0,480.0,Terminated,"San Francisco, CA",83482
+519,John,Morris,john.morris@horizontech.com,2021-10-27,Research & Development Team Lead,8.0,481.0,Leave,"San Francisco, CA",100662
+520,Grant,Williams,grant.williams@horizontech.com,2022-02-21,Senior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",95009
+521,Judy,Fox,judy.fox@horizontech.com,2021-04-07,Junior Research & Development Specialist,8.0,480.0,Active,"San Francisco, CA",45544

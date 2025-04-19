@@ -1,0 +1,23 @@
+key_result_id,objective_id,description,target_value,current_value,unit_of_measurement,start_date,end_date,owner_id,last_updated,confidence_score
+1,1,Increase market share to 15% in target verticals,15.0,8.21,percentage,2025-01-01,2025-12-31,500,2025-03-26,5
+2,1,Achieve #1 or #2 position in industry analyst reports,2.0,4.74,rank,2025-01-01,2025-12-31,491,2025-04-17,10
+3,1,Secure 25 reference customers from Fortune 500,25.0,18.33,customers,2025-01-01,2025-12-31,310,2025-03-21,7
+4,2,Close $15M in new business,15000000.0,8297392.24,USD,2025-01-01,2025-12-31,503,2025-04-18,5
+5,2,Increase average deal size to $100K,100000.0,92986.23,USD,2025-01-01,2025-12-31,150,2025-04-07,9
+6,2,Achieve 120% net revenue retention,120.0,105.33,percentage,2025-01-01,2025-12-31,358,2025-04-18,8
+7,3,Complete development of 5 key AI features,5.0,2.63,features,2025-07-01,2025-09-28,464,2025-04-19,5
+8,3,Achieve 99.99% platform availability,99.99,99.95,percentage,2025-07-01,2025-09-28,113,2025-04-13,9
+9,3,Reduce average API response time to 100ms,100.0,185.64,milliseconds,2025-07-01,2025-09-28,448,2025-04-01,5
+10,3,Onboard 50 beta customers to new platform,50.0,21.54,customers,2025-07-01,2025-09-28,505,2025-03-25,4
+11,4,Increase NPS score to 50,50.0,37.4,score,2025-04-01,2025-06-28,308,2025-04-15,7
+12,4,Reduce annual customer churn to 5%,5.0,8.17,percentage,2025-04-01,2025-06-28,463,2025-04-17,6
+13,4,Decrease average support ticket resolution time to 4 hours,4.0,6.66,hours,2025-04-01,2025-06-28,293,2025-04-13,6
+14,5,Establish legal entities in 3 European countries,3.0,1.14,entities,2025-10-01,2025-12-28,403,2025-04-11,3
+15,5,Hire 20 employees for European operations,20.0,5.78,employees,2025-10-01,2025-12-28,393,2025-04-12,2
+16,5,Generate €5M in European revenue,5000000.0,1107392.86,EUR,2025-10-01,2025-12-28,185,2025-04-02,2
+17,6,Reduce engineering turnover to less than 10%,10.0,19.19,percentage,2025-01-01,2025-12-31,125,2025-03-30,5
+18,6,Hire 50 new engineers,50.0,35.38,engineers,2025-01-01,2025-12-31,330,2025-04-19,7
+19,6,Implement career development plans for 100% of engineering staff,100.0,67.93,percentage,2025-01-01,2025-12-31,325,2025-04-13,6
+20,7,Complete 100% of required security controls,100.0,60.89,percentage,2025-04-01,2025-06-28,175,2025-03-28,6
+21,7,Pass all pre-audit assessments,1.0,1.0,binary,2025-04-01,2025-06-28,427,2025-04-04,10
+22,7,Train 100% of employees on security procedures,100.0,77.12,percentage,2025-04-01,2025-06-28,123,2025-04-19,7

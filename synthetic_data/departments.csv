@@ -1,0 +1,17 @@
+department_id,department_name,department_head_id,parent_department_id,cost_center_code,location
+1,Engineering,7.0,,CC-001,"Austin, TX"
+2,Product Management,8.0,,CC-002,"San Francisco, CA"
+3,Sales & Marketing,9.0,,CC-003,"San Francisco, CA"
+4,Customer Success,10.0,,CC-004,"San Francisco, CA"
+5,Finance & Accounting,11.0,,CC-005,Remote
+6,Human Resources,12.0,,CC-006,Remote
+7,Operations,13.0,,CC-007,"Boston, MA"
+8,Research & Development,14.0,,CC-008,"San Francisco, CA"
+9,Frontend Engineering,,1.0,CC-001-01,"Austin, TX"
+10,Backend Engineering,,1.0,CC-001-01,"Austin, TX"
+11,DevOps Engineering,,1.0,CC-001-01,"Austin, TX"
+12,QA Engineering,,1.0,CC-001-01,"Austin, TX"
+13,Mobile Engineering,,1.0,CC-001-01,"Austin, TX"
+14,Sales,,3.0,CC-003-01,"San Francisco, CA"
+15,Marketing,,3.0,CC-003-01,"San Francisco, CA"
+16,Business Development,,3.0,CC-003-01,"San Francisco, CA"

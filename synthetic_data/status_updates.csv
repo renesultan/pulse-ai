@@ -1,0 +1,77 @@
+update_id,entity_id,entity_type,report_date,status,summary,blockers,next_steps,author_id
+1,1,Team,2025-01-28,On Track,Good progress on Atlas Platform Migration deliverables,No significant blockers at this time,Proceed to next phase of the project,1
+2,1,Team,2025-02-04,Behind,Critical Atlas Platform Migration milestones missed,Major technical issues discovered,Request additional resources to address gaps,1
+3,1,Team,2025-02-16,On Track,Good progress on Atlas Platform Migration deliverables,No significant blockers at this time,Continue with planned development activities,1
+4,1,Team,2025-03-26,At Risk,Resource constraints affecting Atlas Platform Migration timeline,Technical complexity higher than estimated,Reprioritize features to meet critical deadlines,1
+5,1,Team,2025-04-04,On Track,Atlas Platform Migration progressing as planned,No significant blockers at this time,Begin planning for upcoming milestones,1
+6,2,Team,2025-01-27,On Track,All Customer Portal Redesign milestones on schedule,No significant blockers at this time,Proceed to next phase of the project,2
+7,2,Team,2025-03-27,At Risk,Some Customer Portal Redesign milestones at risk,Scope creep affecting timeline,Schedule technical review to address challenges,2
+8,2,Team,2025-04-01,Behind,Customer Portal Redesign behind schedule,Critical dependencies not met,Develop recovery plan with revised timeline,2
+9,3,Team,2025-03-09,On Track,Mobile App 2.0 progressing as planned,No significant blockers at this time,Continue with planned development activities,3
+10,3,Team,2025-04-04,On Track,Good progress on Mobile App 2.0 deliverables,No significant blockers at this time,Begin planning for upcoming milestones,3
+11,4,Team,2025-01-22,On Track,Cloud Infrastructure Upgrade progressing as planned,No significant blockers at this time,Begin planning for upcoming milestones,4
+12,4,Team,2025-02-26,On Track,Cloud Infrastructure Upgrade progressing as planned,No significant blockers at this time,Proceed to next phase of the project,4
+13,4,Team,2025-04-13,On Track,Good progress on Cloud Infrastructure Upgrade deliverables,No significant blockers at this time,Begin planning for upcoming milestones,4
+14,4,Team,2025-04-17,Behind,Cloud Infrastructure Upgrade behind schedule,Team capacity severely constrained,Request additional resources to address gaps,4
+15,5,Team,2025-03-09,On Track,All Data Analytics Platform milestones on schedule,No significant blockers at this time,Continue with planned development activities,5
+16,5,Team,2025-03-13,On Track,All Data Analytics Platform milestones on schedule,No significant blockers at this time,Continue with planned development activities,5
+17,5,Team,2025-04-01,On Track,All Data Analytics Platform milestones on schedule,No significant blockers at this time,Begin planning for upcoming milestones,5
+18,6,Team,2025-03-13,On Track,Good progress on Security Compliance Initiative deliverables,No significant blockers at this time,Begin planning for upcoming milestones,6
+19,6,Team,2025-03-14,On Track,All Security Compliance Initiative milestones on schedule,No significant blockers at this time,Continue with planned development activities,6
+20,6,Team,2025-03-24,On Track,Security Compliance Initiative progressing as planned,No significant blockers at this time,Begin planning for upcoming milestones,6
+21,6,Team,2025-04-09,At Risk,Technical challenges emerging in Security Compliance Initiative,Resource allocation issues,Reprioritize features to meet critical deadlines,6
+22,7,Team,2025-01-26,On Track,API Gateway Implementation progressing as planned,No significant blockers at this time,Proceed to next phase of the project,7
+23,7,Team,2025-01-30,At Risk,Some API Gateway Implementation milestones at risk,Resource allocation issues,Escalate resource needs to management,7
+24,7,Team,2025-02-18,At Risk,Some API Gateway Implementation milestones at risk,Scope creep affecting timeline,Reprioritize features to meet critical deadlines,7
+25,7,Team,2025-02-19,At Risk,Technical challenges emerging in API Gateway Implementation,Dependencies from other teams delayed,Escalate resource needs to management,7
+26,7,Team,2025-03-15,Behind,Critical API Gateway Implementation milestones missed,Critical dependencies not met,Develop recovery plan with revised timeline,7
+27,8,Team,2025-01-27,Behind,Significant delays in DevOps Automation delivery,Critical dependencies not met,Request additional resources to address gaps,8
+28,8,Team,2025-02-22,On Track,All DevOps Automation milestones on schedule,No significant blockers at this time,Begin planning for upcoming milestones,8
+29,8,Team,2025-03-14,On Track,DevOps Automation progressing as planned,No significant blockers at this time,Begin planning for upcoming milestones,8
+30,8,Team,2025-03-27,On Track,Good progress on DevOps Automation deliverables,No significant blockers at this time,Begin planning for upcoming milestones,8
+31,9,Team,2025-01-20,On Track,All ML Recommendation Engine milestones on schedule,No significant blockers at this time,Continue with planned development activities,9
+32,9,Team,2025-01-24,Behind,ML Recommendation Engine behind schedule,Requirements changed significantly,Develop recovery plan with revised timeline,9
+33,10,Team,2025-02-19,At Risk,Some Customer Retention Program milestones at risk,Resource allocation issues,Escalate resource needs to management,10
+34,10,Team,2025-02-22,On Track,Customer Retention Program progressing as planned,No significant blockers at this time,Proceed to next phase of the project,10
+35,10,Team,2025-02-28,On Track,All Customer Retention Program milestones on schedule,No significant blockers at this time,Proceed to next phase of the project,10
+36,10,Team,2025-03-13,At Risk,Some Customer Retention Program milestones at risk,Dependencies from other teams delayed,Escalate resource needs to management,10
+37,11,Team,2025-02-19,On Track,All Horizon 2026 Strategic Planning milestones on schedule,No significant blockers at this time,Continue with planned development activities,11
+38,11,Team,2025-02-26,At Risk,Some Horizon 2026 Strategic Planning milestones at risk,Technical complexity higher than estimated,Escalate resource needs to management,11
+39,11,Team,2025-04-01,On Track,Good progress on Horizon 2026 Strategic Planning deliverables,No significant blockers at this time,Proceed to next phase of the project,11
+40,11,Team,2025-04-08,At Risk,Some Horizon 2026 Strategic Planning milestones at risk,Dependencies from other teams delayed,Escalate resource needs to management,11
+41,12,Team,2025-02-01,Behind,Enterprise CRM Integration behind schedule,Team capacity severely constrained,Develop recovery plan with revised timeline,12
+42,12,Team,2025-02-14,On Track,Good progress on Enterprise CRM Integration deliverables,No significant blockers at this time,Proceed to next phase of the project,12
+43,12,Team,2025-02-18,On Track,Good progress on Enterprise CRM Integration deliverables,No significant blockers at this time,Continue with planned development activities,12
+44,12,Team,2025-02-27,On Track,Good progress on Enterprise CRM Integration deliverables,No significant blockers at this time,Proceed to next phase of the project,12
+45,12,Team,2025-03-27,At Risk,Resource constraints affecting Enterprise CRM Integration timeline,Technical complexity higher than estimated,Escalate resource needs to management,12
+46,13,Team,2025-02-21,At Risk,Resource constraints affecting Marketplace Expansion timeline,Dependencies from other teams delayed,Escalate resource needs to management,13
+47,13,Team,2025-02-28,On Track,Good progress on Marketplace Expansion deliverables,No significant blockers at this time,Continue with planned development activities,13
+48,13,Team,2025-03-10,On Track,All Marketplace Expansion milestones on schedule,No significant blockers at this time,Proceed to next phase of the project,13
+49,13,Team,2025-04-18,At Risk,Some Marketplace Expansion milestones at risk,Scope creep affecting timeline,Reprioritize features to meet critical deadlines,13
+50,14,Team,2025-01-30,On Track,Good progress on Internal Knowledge Base deliverables,No significant blockers at this time,Continue with planned development activities,14
+51,14,Team,2025-02-03,Behind,Internal Knowledge Base behind schedule,Critical dependencies not met,Reduce scope to focus on critical deliverables,14
+52,14,Team,2025-02-08,On Track,Good progress on Internal Knowledge Base deliverables,No significant blockers at this time,Continue with planned development activities,14
+53,14,Team,2025-02-21,On Track,Internal Knowledge Base progressing as planned,No significant blockers at this time,Continue with planned development activities,14
+54,14,Team,2025-04-16,At Risk,Technical challenges emerging in Internal Knowledge Base,Technical complexity higher than estimated,Escalate resource needs to management,14
+55,15,Team,2025-01-20,Behind,Performance Optimization behind schedule,Major technical issues discovered,Request additional resources to address gaps,15
+56,15,Team,2025-01-26,On Track,Good progress on Performance Optimization deliverables,No significant blockers at this time,Continue with planned development activities,15
+57,15,Team,2025-02-01,On Track,Performance Optimization progressing as planned,No significant blockers at this time,Continue with planned development activities,15
+58,15,Team,2025-02-03,On Track,Good progress on Performance Optimization deliverables,No significant blockers at this time,Proceed to next phase of the project,15
+59,15,Team,2025-02-05,On Track,All Performance Optimization milestones on schedule,No significant blockers at this time,Continue with planned development activities,15
+60,1,Department,2025-03-19,On Track,Engineering objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,7
+61,2,Department,2025-03-10,On Track,Product Management objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,8
+62,2,Department,2025-03-15,On Track,Product Management objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,8
+63,2,Department,2025-03-23,On Track,Product Management objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,8
+64,3,Department,2025-02-11,On Track,Sales & Marketing objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,9
+65,4,Department,2025-01-23,On Track,Customer Success objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,10
+66,4,Department,2025-02-07,On Track,Customer Success objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,10
+67,5,Department,2025-02-25,At Risk,Some Finance & Accounting objectives at risk due to resource constraints,Budget limitations and competing priorities affecting progress,Reprioritizing department initiatives and reallocating resources,11
+68,5,Department,2025-03-12,On Track,Finance & Accounting objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,11
+69,5,Department,2025-03-23,On Track,Finance & Accounting objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,11
+70,6,Department,2025-02-05,On Track,Human Resources objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,12
+71,6,Department,2025-03-13,At Risk,Some Human Resources objectives at risk due to resource constraints,Budget limitations and competing priorities affecting progress,Reprioritizing department initiatives and reallocating resources,12
+72,7,Department,2025-02-19,At Risk,Some Operations objectives at risk due to resource constraints,Budget limitations and competing priorities affecting progress,Reprioritizing department initiatives and reallocating resources,13
+73,7,Department,2025-03-29,Behind,Operations facing significant challenges in meeting objectives,Critical resource gaps and external factors impacting multiple initiatives,Developing department recovery plan and requesting additional support,13
+74,7,Department,2025-04-09,At Risk,Some Operations objectives at risk due to resource constraints,Budget limitations and competing priorities affecting progress,Reprioritizing department initiatives and reallocating resources,13
+75,8,Department,2025-03-21,At Risk,Some Research & Development objectives at risk due to resource constraints,Budget limitations and competing priorities affecting progress,Reprioritizing department initiatives and reallocating resources,14
+76,8,Department,2025-03-29,On Track,Research & Development objectives progressing well across all initiatives,No significant blockers at the department level,Continue executing on department strategy and supporting team initiatives,14

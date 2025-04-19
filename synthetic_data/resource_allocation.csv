@@ -1,0 +1,59 @@
+allocation_id,department_id,objective_id,resource_type,allocated_amount,timeframe,actual_usage,variance_explanation
+1,1,1,Headcount,10,FY 2025,8,Resource reallocation due to changing priorities
+2,1,1,Budget,1197863,FY 2025,1244395,Budget adjustment based on actual expenditure patterns
+3,1,2,Headcount,3,Q4 2025,2,Resource reallocation due to changing priorities
+4,1,2,Budget,853627,Q4 2025,959017,Budget adjustment based on actual expenditure patterns
+5,1,3,Headcount,5,FY 2025,5,Resource reallocation due to changing priorities
+6,1,3,Budget,639945,FY 2025,571537,Budget adjustment based on actual expenditure patterns
+7,1,4,Headcount,4,FY 2025,3,Resource reallocation due to changing priorities
+8,1,4,Budget,588287,FY 2025,596214,Budget adjustment based on actual expenditure patterns
+9,2,5,Headcount,15,Q3 2025,15,Resource reallocation due to changing priorities
+10,2,5,Budget,377482,Q3 2025,450360,Budget adjustment based on actual expenditure patterns
+11,2,6,Headcount,12,FY 2025,14,Resource reallocation due to changing priorities
+12,2,6,Budget,375040,FY 2025,326091,Budget adjustment based on actual expenditure patterns
+13,2,7,Headcount,18,FY 2025,16,Resources allocated to department-specific initiative
+14,2,7,Budget,216473,FY 2025,200714,Budget allocated to department-specific initiative
+15,3,8,Headcount,8,Q4 2025,8,Resource reallocation due to changing priorities
+16,3,8,Budget,360868,Q4 2025,425471,Budget adjustment based on actual expenditure patterns
+17,3,9,Headcount,6,FY 2025,5,Resource reallocation due to changing priorities
+18,3,9,Budget,548602,FY 2025,655690,Budget adjustment based on actual expenditure patterns
+19,3,10,Headcount,4,FY 2025,3,Resource reallocation due to changing priorities
+20,3,10,Budget,261862,FY 2025,260860,Budget adjustment based on actual expenditure patterns
+21,3,11,Headcount,4,Q4 2025,3,Resource reallocation due to changing priorities
+22,3,11,Budget,432612,Q4 2025,437188,Budget adjustment based on actual expenditure patterns
+23,4,12,Headcount,7,Q3 2025,5,Resource reallocation due to changing priorities
+24,4,12,Budget,788830,Q3 2025,857280,Budget adjustment based on actual expenditure patterns
+25,4,13,Headcount,3,Q3 2025,2,Resource reallocation due to changing priorities
+26,4,13,Budget,605438,Q3 2025,489657,Budget adjustment based on actual expenditure patterns
+27,4,14,Headcount,10,Q3 2025,10,Resources allocated to department-specific initiative
+28,4,14,Budget,1888518,Q3 2025,2203692,Budget allocated to department-specific initiative
+29,5,15,Headcount,16,FY 2025,18,Resource reallocation due to changing priorities
+30,5,15,Budget,532325,FY 2025,505408,Budget adjustment based on actual expenditure patterns
+31,5,16,Headcount,8,Q2 2025,6,Resource reallocation due to changing priorities
+32,5,16,Budget,199635,Q2 2025,183805,Budget adjustment based on actual expenditure patterns
+33,5,17,Headcount,2,Q2 2025,2,Resource reallocation due to changing priorities
+34,5,17,Budget,82788,Q2 2025,92452,Budget adjustment based on actual expenditure patterns
+35,5,18,Headcount,8,Q2 2025,6,Resource reallocation due to changing priorities
+36,5,18,Budget,235910,Q2 2025,280142,Budget adjustment based on actual expenditure patterns
+37,6,19,Headcount,10,FY 2025,8,Resource reallocation due to changing priorities
+38,6,19,Budget,1110126,FY 2025,1024345,Budget adjustment based on actual expenditure patterns
+39,6,20,Headcount,7,Q2 2025,7,Resource reallocation due to changing priorities
+40,6,20,Budget,393813,Q2 2025,464508,Budget adjustment based on actual expenditure patterns
+41,6,21,Headcount,8,Q2 2025,9,Resource reallocation due to changing priorities
+42,6,21,Budget,486123,Q2 2025,576577,Budget adjustment based on actual expenditure patterns
+43,6,22,Headcount,2,Q3 2025,2,Resource reallocation due to changing priorities
+44,6,22,Budget,279878,Q3 2025,332218,Budget adjustment based on actual expenditure patterns
+45,7,23,Headcount,5,Q4 2025,5,Resource reallocation due to changing priorities
+46,7,23,Budget,156649,Q4 2025,140231,Budget adjustment based on actual expenditure patterns
+47,7,24,Headcount,10,FY 2025,11,Resource reallocation due to changing priorities
+48,7,24,Budget,320781,FY 2025,268009,Budget adjustment based on actual expenditure patterns
+49,7,25,Headcount,9,Q2 2025,10,Resource reallocation due to changing priorities
+50,7,25,Budget,450208,Q2 2025,440596,Budget adjustment based on actual expenditure patterns
+51,8,26,Headcount,6,FY 2025,5,Resource reallocation due to changing priorities
+52,8,26,Budget,482420,FY 2025,406783,Budget adjustment based on actual expenditure patterns
+53,8,27,Headcount,5,FY 2025,5,Resource reallocation due to changing priorities
+54,8,27,Budget,626155,FY 2025,743647,Budget adjustment based on actual expenditure patterns
+55,8,28,Headcount,5,Q2 2025,4,Resource reallocation due to changing priorities
+56,8,28,Budget,337281,Q2 2025,343490,Budget adjustment based on actual expenditure patterns
+57,8,29,Headcount,6,Q4 2025,6,Resource reallocation due to changing priorities
+58,8,29,Budget,668421,Q4 2025,708785,Budget adjustment based on actual expenditure patterns

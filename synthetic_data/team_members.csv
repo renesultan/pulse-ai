@@ -1,0 +1,119 @@
+team_id,employee_id,role_in_team,allocation_percentage
+1,251,Team Lead,60
+1,370,Developer,62
+1,419,DevOps Engineer,71
+1,74,QA Engineer,100
+1,3,Project Manager,21
+1,298,Designer,78
+2,237,Team Lead,32
+2,224,Project Manager,60
+2,480,Developer,47
+2,457,Project Manager,48
+2,95,Technical Lead,100
+2,508,Content Strategist,79
+2,500,Developer,74
+3,267,Team Lead,42
+3,176,QA Engineer,100
+3,88,Business Analyst,47
+3,398,Designer,32
+3,247,Content Strategist,61
+3,353,Data Scientist,100
+4,387,Team Lead,36
+4,75,QA Engineer,100
+4,258,QA Engineer,52
+4,172,Marketing Specialist,100
+4,509,Content Strategist,56
+4,133,Project Manager,25
+4,4,Developer,61
+5,267,Team Lead,49
+5,349,UX Researcher,100
+5,499,Developer,100
+5,511,Marketing Specialist,87
+5,157,Marketing Specialist,80
+5,196,Data Scientist,37
+6,431,Team Lead,68
+6,285,Technical Lead,100
+6,239,Data Scientist,100
+6,286,Data Scientist,100
+6,382,Data Scientist,100
+6,193,Designer,84
+7,311,Team Lead,62
+7,441,Content Strategist,49
+7,31,Product Owner,42
+7,245,Marketing Specialist,37
+7,71,Project Manager,64
+7,276,Technical Lead,79
+7,223,Technical Lead,100
+7,246,Product Owner,33
+7,306,Content Strategist,63
+7,32,Product Owner,67
+7,304,Product Owner,100
+7,249,Content Strategist,100
+8,73,Team Lead,52
+8,97,Marketing Specialist,38
+8,292,Project Manager,48
+8,211,Marketing Specialist,79
+8,287,Product Owner,100
+8,69,Business Analyst,100
+9,311,Team Lead,37
+9,441,Project Manager,100
+9,360,Technical Lead,100
+9,225,UX Researcher,100
+9,336,Project Manager,61
+10,387,Team Lead,64
+10,411,Designer,83
+10,471,UX Researcher,100
+10,422,Developer,100
+10,31,QA Engineer,100
+10,75,UX Researcher,32
+10,271,Product Owner,81
+10,154,Business Analyst,58
+11,261,Team Lead,50
+11,218,Designer,48
+11,80,Developer,69
+11,159,Data Scientist,62
+11,200,Data Scientist,100
+11,99,Designer,100
+11,411,Content Strategist,20
+11,292,Business Analyst,21
+11,255,Designer,100
+11,129,Content Strategist,87
+11,463,Technical Lead,34
+12,185,Team Lead,67
+12,305,Marketing Specialist,25
+12,117,DevOps Engineer,41
+12,260,Marketing Specialist,36
+12,112,Designer,80
+12,474,QA Engineer,58
+12,494,Content Strategist,55
+12,177,Business Analyst,75
+12,161,DevOps Engineer,22
+12,521,Marketing Specialist,70
+12,495,Business Analyst,36
+12,8,Product Owner,15
+12,114,Designer,100
+12,509,Data Scientist,84
+12,103,Product Owner,100
+13,246,Team Lead,51
+13,203,Content Strategist,100
+13,311,DevOps Engineer,72
+13,455,Marketing Specialist,100
+13,131,Marketing Specialist,79
+13,270,Data Scientist,17
+13,298,Technical Lead,16
+13,357,Product Owner,27
+14,416,Team Lead,44
+14,384,DevOps Engineer,100
+14,81,Content Strategist,88
+14,5,Content Strategist,100
+14,117,Data Scientist,80
+14,272,Project Manager,77
+15,93,Team Lead,64
+15,9,Developer,23
+15,272,Data Scientist,100
+15,443,UX Researcher,100
+15,380,Business Analyst,44
+15,367,Technical Lead,57
+15,232,DevOps Engineer,100
+15,439,Marketing Specialist,100
+15,511,Technical Lead,100

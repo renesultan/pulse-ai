@@ -1,0 +1,30 @@
+department_objective_id,department_id,objective_statement,parent_objective_id,timeframe,owner_id,status,priority
+1,1,Develop technical solutions for build world-class engineering organization,6.0,FY 2025,7,On Track,High
+2,1,Build infrastructure to support expand into european market,5.0,Q4 2025,7,At Risk,Medium
+3,1,Build infrastructure to support achieve market leadership in cloud-based enterprise solutions,1.0,FY 2025,7,On Track,Medium
+4,1,Deliver technical capabilities for build world-class engineering organization,6.0,FY 2025,7,At Risk,Medium
+5,2,Prioritize features that enable launch next-generation platform with ai capabilities,3.0,Q3 2025,8,At Risk,High
+6,2,Define product roadmap to achieve increase annual recurring revenue by 30%,2.0,FY 2025,8,On Track,High
+7,2,Create comprehensive product documentation,,FY 2025,8,On Track,High
+8,3,Develop go-to-market strategy for expand into european market,5.0,Q4 2025,9,At Risk,Medium
+9,3,Generate qualified leads to achieve achieve market leadership in cloud-based enterprise solutions,1.0,FY 2025,9,On Track,Medium
+10,3,Develop go-to-market strategy for build world-class engineering organization,6.0,FY 2025,9,Behind,Low
+11,3,Develop go-to-market strategy for expand into european market,5.0,Q4 2025,9,On Track,Medium
+12,4,Improve customer experience to enable launch next-generation platform with ai capabilities,3.0,Q3 2025,10,On Track,High
+13,4,Improve customer experience to enable launch next-generation platform with ai capabilities,3.0,Q3 2025,10,On Track,Medium
+14,4,Create customer feedback program,,Q3 2025,10,Behind,Low
+15,5,Ensure funding for initiatives related to increase annual recurring revenue by 30%,2.0,FY 2025,11,On Track,High
+16,5,Ensure funding for initiatives related to improve customer satisfaction and reduce churn,4.0,Q2 2025,11,Behind,Medium
+17,5,Ensure funding for initiatives related to achieve soc 2 type ii compliance,7.0,Q2 2025,11,On Track,Low
+18,5,Develop financial models for achieve soc 2 type ii compliance,7.0,Q2 2025,11,Behind,Medium
+19,6,Recruit talent needed to achieve build world-class engineering organization,6.0,FY 2025,12,On Track,High
+20,6,Develop training programs to support improve customer satisfaction and reduce churn,4.0,Q2 2025,12,On Track,Medium
+21,6,Create compensation structures aligned with improve customer satisfaction and reduce churn,4.0,Q2 2025,12,At Risk,Medium
+22,6,Develop training programs to support launch next-generation platform with ai capabilities,3.0,Q3 2025,12,At Risk,Low
+23,7,Streamline processes to enable expand into european market,5.0,Q4 2025,13,At Risk,Medium
+24,7,Implement operational improvements for build world-class engineering organization,6.0,FY 2025,13,Behind,High
+25,7,Implement operational improvements for achieve soc 2 type ii compliance,7.0,Q2 2025,13,Behind,High
+26,8,Create prototypes to support increase annual recurring revenue by 30%,2.0,FY 2025,14,On Track,High
+27,8,Create prototypes to support increase annual recurring revenue by 30%,2.0,FY 2025,14,On Track,High
+28,8,Create prototypes to support improve customer satisfaction and reduce churn,4.0,Q2 2025,14,On Track,Medium
+29,8,Create prototypes to support expand into european market,5.0,Q4 2025,14,At Risk,High

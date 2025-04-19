@@ -1,0 +1,64 @@
+update_id,key_result_id,previous_value,new_value,update_date,confidence_score,notes,updater_id
+1,1,0.0,0.0,2025-01-01,5,No change in metric this period,40
+2,1,0.0,8.21,2025-02-12,5,On track to meet target,170
+3,2,0.0,4.74,2025-01-01,5,Steady improvement in metrics,92
+4,3,0.0,0.0,2025-01-01,5,No change in metric this period,310
+5,3,0.0,18.33,2025-02-09,7,Steady improvement in metrics,310
+6,4,0.0,8297392.24,2025-01-01,5,Team efforts showing positive results,503
+7,5,0.0,0.0,2025-01-01,5,Progress temporarily plateaued,150
+8,5,0.0,18597.25,2025-01-20,4,Team efforts showing positive results,176
+9,5,18597.25,37194.49,2025-02-08,4,Steady improvement in metrics,150
+10,5,37194.49,55791.74,2025-02-27,4,On track to meet target,150
+11,5,55791.74,92986.23,2025-03-18,5,On track to meet target,150
+12,6,0.0,0.0,2025-01-01,5,Maintaining current level while addressing challenges,210
+13,6,0.0,105.33,2025-02-23,8,Good progress made this period,192
+14,7,0.0,0.0,2025-07-01,5,Maintaining current level while addressing challenges,448
+15,7,0.0,0.66,2025-06-13,2,Team efforts showing positive results,14
+16,7,0.66,1.31,2025-05-26,2,Good progress made this period,155
+17,7,1.31,2.63,2025-05-08,3,Good progress made this period,464
+18,8,0.0,0.0,2025-07-01,5,Maintaining current level while addressing challenges,113
+19,8,0.0,33.32,2025-06-05,5,On track to meet target,113
+20,8,33.32,99.95,2025-05-10,7,Steady improvement in metrics,294
+21,9,0.0,177.1,2025-07-01,5,Facing challenges in making progress,448
+22,9,177.1,185.64,2025-05-17,5,Implementing recovery plan,448
+23,10,0.0,0.0,2025-07-01,5,Progress temporarily plateaued,505
+24,10,0.0,5.38,2025-06-07,2,Good progress made this period,505
+25,10,5.38,10.77,2025-05-13,2,Good progress made this period,377
+26,10,10.77,21.54,2025-04-19,2,Steady improvement in metrics,183
+27,11,0.0,0.0,2025-04-01,5,Maintaining current level while addressing challenges,34
+28,11,0.0,7.48,2025-04-03,5,Steady improvement in metrics,308
+29,11,7.48,14.96,2025-04-06,4,Steady improvement in metrics,308
+30,11,14.96,22.44,2025-04-09,3,Team efforts showing positive results,308
+31,11,22.44,37.4,2025-04-12,4,Good progress made this period,308
+32,12,0.0,9.76,2025-04-01,5,Facing challenges in making progress,463
+33,12,9.76,9.36,2025-04-05,10,Optimization initiatives working well,411
+34,12,9.36,8.96,2025-04-09,5,Improvement efforts showing results,90
+35,12,8.96,8.17,2025-04-13,4,Improvement efforts showing results,463
+36,13,0.0,6.66,2025-04-01,5,Reassessing approach to meet target,293
+37,14,0.0,0.0,2025-10-01,5,Progress temporarily plateaued,403
+38,14,0.0,1.14,2025-07-07,3,On track to meet target,403
+39,15,0.0,0.0,2025-10-01,5,No change in metric this period,393
+40,15,0.0,1.93,2025-08-05,1,Steady improvement in metrics,300
+41,15,1.93,5.78,2025-06-09,2,On track to meet target,393
+42,16,0.0,0.0,2025-10-01,5,No change in metric this period,185
+43,16,0.0,221478.57,2025-08-26,1,Steady improvement in metrics,185
+44,16,221478.57,442957.14,2025-07-21,1,Team efforts showing positive results,80
+45,16,442957.14,664435.72,2025-06-14,1,Good progress made this period,185
+46,16,664435.72,1107392.86,2025-05-09,1,Good progress made this period,185
+47,17,0.0,19.34,2025-01-01,5,Reassessing approach to meet target,125
+48,17,19.34,19.29,2025-01-30,7,Optimization initiatives working well,356
+49,17,19.29,19.19,2025-02-28,3,Optimization initiatives working well,125
+50,18,0.0,35.38,2025-01-01,5,Team efforts showing positive results,215
+51,19,0.0,0.0,2025-01-01,5,Maintaining current level while addressing challenges,325
+52,19,0.0,13.59,2025-01-21,3,On track to meet target,483
+53,19,13.59,27.17,2025-02-10,3,Good progress made this period,325
+54,19,27.17,40.76,2025-03-03,3,On track to meet target,325
+55,19,40.76,67.93,2025-03-23,4,Good progress made this period,325
+56,20,0.0,0.0,2025-04-01,5,Working on strategies to resume progress,175
+57,20,0.0,20.3,2025-03-31,4,Steady improvement in metrics,175
+58,20,20.3,60.89,2025-03-30,6,Good progress made this period,175
+59,21,0.0,0.0,2025-04-01,5,Maintaining current level while addressing challenges,404
+60,21,0.0,1.0,2025-04-02,10,On track to meet target,427
+61,22,0.0,0.0,2025-04-01,5,No change in metric this period,123
+62,22,0.0,25.71,2025-04-07,3,Steady improvement in metrics,114
+63,22,25.71,77.12,2025-04-13,5,On track to meet target,123
