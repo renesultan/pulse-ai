@@ -58,6 +58,7 @@ build/
 # Database
 *.sqlite3
 *.db
+!data/organization.db  # Include our development database
 
 # Logs
 logs/

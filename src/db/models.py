@@ -299,7 +299,7 @@ class ResourceAllocation(Base):
     objective = relationship("DepartmentObjective", back_populates="resource_allocations")
 
 
-def get_engine(db_path="sqlite:///organization.db"):
+def get_engine(db_path="sqlite:///data/organization.db"):
     """Create and return a SQLAlchemy engine instance."""
     return create_engine(db_path)
 
