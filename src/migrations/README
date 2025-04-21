@@ -1,0 +1,79 @@
+# Database Migrations
+
+This directory contains database migration scripts using Alembic.
+
+## Usage
+
+1. To create a new migration:
+   ```
+   alembic revision --autogenerate -m "Your migration description"
+   ```
+
+2. To upgrade the database to the latest version:
+   ```
+   alembic upgrade head
+   ```
+
+3. To downgrade the database to a specific version:
+   ```
+   alembic downgrade <revision>
+   ```
+
+4. To see the current database version:
+   ```
+   alembic current
+   ```
+
+5. To see the migration history:
+   ```
+   alembic history
+   ```
+
+## Migration Style Guidelines
+
+1. Make migrations atomic and focused on a single change when possible
+2. Add clear descriptions to migration files
+3. Test both upgrade and downgrade paths
+4. For data migrations, include validation steps
+5. Handle nullable and default values carefully
+
+## Common Scenarios
+
+### Adding a New Table
+
+```python
+def upgrade():
+    op.create_table(
+        'table_name',
+        sa.Column('id', sa.Integer(), nullable=False),
+        sa.Column('name', sa.String(255), nullable=False),
+        # Add other columns
+        sa.PrimaryKeyConstraint('id')
+    )
+
+def downgrade():
+    op.drop_table('table_name')
+```
+
+### Adding a New Column
+
+```python
+def upgrade():
+    op.add_column('table_name', sa.Column('new_column', sa.String(255)))
+
+def downgrade():
+    op.drop_column('table_name', 'new_column')
+```
+
+### Adding a Foreign Key
+
+```python
+def upgrade():
+    op.create_foreign_key(
+        'fk_name', 'source_table', 'target_table',
+        ['source_column'], ['target_column']
+    )
+
+def downgrade():
+    op.drop_constraint('fk_name', 'source_table', type_='foreignkey')
+```

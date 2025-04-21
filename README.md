@@ -17,12 +17,41 @@ This project is in the early development phase. We have completed:
 - Initial project structure setup
 - Synthetic data generation for testing and development
 - Environment setup scripts
+- SQLAlchemy database models for core entities
+- Database migration system (Alembic)
+- CSV import scripts for database population
+- Basic query capabilities
+
+## Project Structure
+
+The project is organized into the following directories:
+
+```
+pulse-ai/
+├── docs/               # Documentation
+│   ├── architecture/   # Architecture design documents
+│   ├── development/    # Development guides
+│   ├── specifications/ # Feature and technical specifications
+│   └── tutorials/      # Tutorials for using the application
+├── src/                # Source code
+│   ├── api/            # FastAPI application code
+│   ├── db/             # Database models and operations
+│   ├── migrations/     # Alembic database migrations
+│   ├── scripts/        # Utility scripts
+│   └── utils/          # Common utilities
+├── synthetic_data/     # Synthetic data CSV files
+├── tests/              # Test suite
+│   ├── unit/           # Unit tests
+│   ├── integration/    # Integration tests
+│   └── api/            # API tests
+└── setup_env.sh        # Environment setup script
+```
 
 ## Technical Architecture
 
 - **Frontend**: React with TypeScript
 - **Backend**: FastAPI (Python)
-- **Database**: PostgreSQL
+- **Database**: SQLite (development), PostgreSQL (production)
 - **Development Approach**: Iterative with small, incremental steps
 - **Deployment**: Docker containers
 
@@ -57,13 +86,24 @@ This project is in the early development phase. We have completed:
    source venv/bin/activate
    ```
 
+4. Import data into the database:
+   ```bash
+   python -m src.db.import_data
+   ```
+   This will create a SQLite database with the synthetic data.
+
+5. Run query examples:
+   ```bash
+   python -m src.db.query_data
+   ```
+
 ### Synthetic Data
 
 The project includes a comprehensive synthetic data generator that creates realistic organizational data for development and testing. The data represents "Horizon Technologies," a fictional mid-sized technology company with ~500 employees.
 
 To generate fresh synthetic data:
 ```bash
-python generate_org_data.py
+python -m src.scripts.generate_org_data
 ```
 
 Generated data includes:
@@ -83,9 +123,9 @@ The development is organized into four phases:
 1. **Database Setup & Data Import**
    - [x] Initial project structure
    - [x] Basic data generation
-   - [ ] SQLAlchemy models for core entities
-   - [ ] Database migration system (Alembic)
-   - [ ] CSV import script
+   - [x] SQLAlchemy models for core entities
+   - [x] Database migration system (Alembic)
+   - [x] CSV import script
 
 2. **Basic API & Authentication**
    - [ ] FastAPI application structure
@@ -143,81 +183,16 @@ The development is organized into four phases:
     - [ ] User experience refinement
     - [ ] Deployment preparation
 
-## Technical Design
+## Documentation
 
-### Data Model
+The documentation is organized into several sections:
 
-The core entities in our system include:
+- **Architecture** - Technical architecture and design decisions
+- **Development** - Development guides, workflows, and best practices
+- **Specifications** - Detailed specifications for features and components
+- **Tutorials** - Step-by-step guides for using the application
 
-1. **Organization**
-   - Represents the company structure
-   - Contains metadata about the organization
-
-2. **Node**
-   - Represents departments, teams, or individuals
-   - Forms the building blocks of the organizational chart
-   - Contains attributes like name, type, and metadata
-
-3. **NodeRelationship**
-   - Defines hierarchical connections between nodes
-   - Supports different relationship types (reports to, collaborates with)
-
-4. **ObjectiveKeyResult (OKR)**
-   - Tracks objectives at different levels (company, department, team)
-   - Contains key results that measure progress
-   - Includes metadata like timeframe, owner, status, and priority
-
-5. **Dependency**
-   - Tracks dependencies between teams or objectives
-   - Includes status, criticality, and impact assessment
-
-### API Design
-
-The API will follow RESTful principles with the following main endpoints:
-
-1. **Authentication**
-   - `/auth/login`
-   - `/auth/register`
-   - `/auth/refresh`
-
-2. **Organization Structure**
-   - `/api/organization`
-   - `/api/departments`
-   - `/api/teams`
-   - `/api/employees`
-
-3. **OKRs and Alignment**
-   - `/api/objectives`
-   - `/api/key-results`
-   - `/api/alignment`
-
-4. **Dependencies**
-   - `/api/dependencies`
-   - `/api/status-updates`
-
-5. **Analysis**
-   - `/api/analysis/alignment`
-   - `/api/analysis/resources`
-   - `/api/analysis/bottlenecks`
-
-### Frontend Architecture
-
-The frontend will be built with React and TypeScript, following these principles:
-
-1. **Component Structure**
-   - Atomic design methodology
-   - Reusable UI components
-   - Container/presentation component pattern
-
-2. **State Management**
-   - React Context for global state
-   - React Query for server state
-   - Local component state where appropriate
-
-3. **Visualization Libraries**
-   - D3.js for custom visualizations
-   - React Flow for organizational charts
-   - Recharts for standard charts and graphs
+See the [Documentation Index](docs/README.md) for a complete list of available documentation.
 
 ## Contribution Guidelines
 
@@ -259,34 +234,6 @@ The frontend will be built with React and TypeScript, following these principles
    - Use functional components with hooks
    - Implement proper error handling
    - Write unit tests for components
-
-### Testing
-
-1. **Backend**
-   - Unit tests with pytest
-   - Integration tests for API endpoints
-   - Use test fixtures for database operations
-
-2. **Frontend**
-   - Component tests with React Testing Library
-   - End-to-end tests with Cypress
-   - Snapshot testing for UI components
-
-## Deployment
-
-The application is designed to be deployed as Docker containers:
-
-1. **Development**
-   - Local Docker Compose setup
-   - Hot-reloading for both frontend and backend
-
-2. **Staging**
-   - Automated deployment from `develop` branch
-   - Integration testing environment
-
-3. **Production**
-   - Deployment from `main` branch
-   - Scalable infrastructure with load balancing
 
 ## License
 
