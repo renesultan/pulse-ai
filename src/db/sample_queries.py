@@ -114,8 +114,8 @@ def run_sample_queries():
     """Run sample queries against the database and display the results."""
     # Determine database path
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(script_dir)
-    db_path = os.path.join(project_root, "organization.db")
+    project_root = os.path.dirname(os.path.dirname(script_dir))  # Two levels up from src/db
+    db_path = os.path.join(project_root, "data", "organization.db")
     
     # Check if database exists
     if not os.path.exists(db_path):

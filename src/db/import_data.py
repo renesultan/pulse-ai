@@ -721,10 +721,11 @@ class DataImporter:
 
 if __name__ == "__main__":
     # Default data directory
-    data_dir = Path("synthetic_data")
+    script_dir = Path(__file__).parent.parent.parent  # Get project root
+    data_dir = script_dir / "synthetic_data"
     
-    # Create the database in the project root
-    db_path = "sqlite:///organization.db"
+    # Create the database in the data directory
+    db_path = "sqlite:///data/organization.db"
     
     # Create and run the importer
     importer = DataImporter(data_dir, db_path)

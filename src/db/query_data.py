@@ -11,9 +11,8 @@ import logging
 from sqlalchemy import func, desc
 from sqlalchemy.orm import sessionmaker, joinedload, aliased
 
-# Add parent directory to path to import models
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from db.models import (
+# Import models from the src package
+from src.db.models import (
     Base, Organization, Department, Position, Employee, Team, TeamMember,
     CompanyObjective, DepartmentObjective, TeamObjective, KeyResult,
     OKRUpdate, TeamDependency, StatusUpdate, ResourceAllocation,
@@ -35,9 +34,9 @@ logger = logging.getLogger(__name__)
 class OrganizationDatabase:
     """Class to handle database queries for the organization data."""
     
-    def __init__(self, db_path="sqlite:///organization.db"):
+    def __init__(self, db_path=None):
         """Initialize the database connection."""
-        self.engine = get_engine(db_path)
+        self.engine = get_engine(db_path) if db_path else get_engine()
         self.Session = sessionmaker(bind=self.engine)
     
     def employee_count_by_department(self):
@@ -220,9 +219,6 @@ class OrganizationDatabase:
 
 
 if __name__ == "__main__":
-    # Default database path
-    db_path = "sqlite:///organization.db"
-    
-    # Create and run the query examples
-    db = OrganizationDatabase(db_path)
+    # Use the default path from models
+    db = OrganizationDatabase()
     db.run_all_queries()
